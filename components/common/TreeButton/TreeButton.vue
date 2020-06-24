@@ -4,7 +4,7 @@
 		@click="handleClick"
 		:class="[{disable: disable}, {loading: loading}]"
 		:style="{width: width + 'rpx', height: height + 'rpx', lineHeight: height + 'rpx'}">
-		<image v-if="loading" src="@/static/common/loading.png" mode=""></image>{{loading? '提交中' : text}}
+		<image class="loading" v-if="loading" src="@/static/common/loading.png" mode=""></image>{{loading? '提交中' : text}}
 	</view>
 </template>
 
@@ -57,7 +57,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	image {
+	.loading {
 		width: 40rpx;
 		height: 40rpx;
 		margin-right: 20rpx;

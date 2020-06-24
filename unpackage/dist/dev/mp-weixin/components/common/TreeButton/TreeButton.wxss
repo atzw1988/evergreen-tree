@@ -15,7 +15,7 @@
   -webkit-justify-content: center;
           justify-content: center;
 }
-.btnContent image.data-v-029fd83f {
+.btnContent .loading.data-v-029fd83f {
   width: 40rpx;
   height: 40rpx;
   margin-right: 20rpx;

@@ -1,12 +1,22 @@
 {
   "pages": [
-    "pages/person/bind/bind",
     "pages/home/home",
     "pages/product/product",
     "pages/team/team",
     "pages/mine/mine"
   ],
-  "subPackages": [],
+  "subPackages": [
+    {
+      "root": "pages/person",
+      "pages": [
+        "policyMana/policyMana",
+        "customer/customer",
+        "order/order",
+        "customerInfo/customerInfo",
+        "bind/bind"
+      ]
+    }
+  ],
   "window": {
     "pageOrientation": "portrait",
     "navigationBarTextStyle": "black",
@@ -46,6 +56,14 @@
         "text": "我的"
       }
     ]
+  },
+  "preloadRule": {
+    "pages/mine/mine": {
+      "network": "all",
+      "packages": [
+        "pages/person"
+      ]
+    }
   },
   "permission": {
     "scope.userLocation": {

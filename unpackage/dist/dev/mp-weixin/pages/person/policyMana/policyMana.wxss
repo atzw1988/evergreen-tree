@@ -1,0 +1,10 @@
+.policyManaPage.data-v-2caa8a96 {
+  width: 100%;
+  height: 100vh;
+}
+.policyManaPage .itemList.data-v-2caa8a96 {
+  width: 690rpx;
+  height: calc(100vh - 80rpx);
+  margin: 0 auto;
+}
+

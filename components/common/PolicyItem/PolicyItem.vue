@@ -2,7 +2,7 @@
 	<view class="item">
 		<view class="header">
 			<view class="person">
-				<image src="http://iph.href.lu/17x17?fg=666666&bg=cccccc" mode=""></image>
+				<image class="personImg" src="http://iph.href.lu/17x17?fg=666666&bg=cccccc" mode=""></image>
 				<view class="name">{{item.name}}</view>
 			</view>
 			<view class="tag">{{filter.kindName(item.kind)}}</view>
@@ -22,11 +22,11 @@
 		</view>
 		<view class="down">
 			<view class="phone">
-				<image src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
+				<image class="icon" src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
 				<view class="phoneNo">{{item.phone}}</view>
 			</view>
 			<view class="order">
-				<image src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
+				<image class="icon" src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
 				<view class="orderNo">{{item.orderNo}}</view>
 			</view>
 		</view>
@@ -76,7 +76,7 @@ export default {
 		.person {
 			display: flex;
 			align-items: center;
-			image {
+			.personImg {
 				width: 34rpx;
 				height: 34rpx;
 				margin-right: 20rpx;
@@ -139,7 +139,7 @@ export default {
 		.phone, .order {
 			display: flex;
 			align-items: center;
-			image {
+			.icon {
 				width: 24rpx;
 				height: 24rpx;
 				margin-right: 10rpx;

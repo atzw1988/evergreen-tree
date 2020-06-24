@@ -1,0 +1,95 @@
+.item.data-v-c24269fa {
+  width: 100%;
+  height: 304rpx;
+  background-color: #FFFFFF;
+  border-radius: 24rpx;
+  margin: 30rpx 0 0;
+  font-size: 24rpx;
+  color: #333333;
+}
+.item .content.data-v-c24269fa {
+  width: 630rpx;
+  height: 100%;
+  margin: 0 auto;
+}
+.item .content .header.data-v-c24269fa {
+  width: 100%;
+  height: 90rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  border-bottom: 2rpx solid #EDEDED;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  line-height: 90rpx;
+}
+.item .content .header .title.data-v-c24269fa {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.item .content .header .success.data-v-c24269fa {
+  color: #00D6C0;
+}
+.item .content .header .waiting.data-v-c24269fa {
+  color: #F0AD4E;
+}
+.item .content .header .fail.data-v-c24269fa {
+  color: #EE0A24;
+}
+.item .content .middle.data-v-c24269fa {
+  width: 100%;
+  height: 126rpx;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid #EDEDED;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.item .content .middle .person.data-v-c24269fa,
+.item .content .middle .contact.data-v-c24269fa {
+  width: 630rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  margin-top: 12rpx;
+}
+.item .content .middle .person .label.data-v-c24269fa,
+.item .content .middle .contact .label.data-v-c24269fa {
+  color: #BCC2CC;
+}
+.item .content .down.data-v-c24269fa {
+  width: 100%;
+  height: 70rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.item .content .down .orderNo.data-v-c24269fa,
+.item .content .down .policyNo.data-v-c24269fa {
+  font-size: 24rpx;
+  color: #BCC2CC;
+}
+.item .content .down .orderNo text.data-v-c24269fa,
+.item .content .down .policyNo text.data-v-c24269fa {
+  margin-left: 16rpx;
+}
+.item .content .down .policyNo.data-v-c24269fa {
+  color: #78808B;
+}
+.item .content .down .policyNo text.data-v-c24269fa {
+  color: #78808B;
+}
+

@@ -1,7 +1,7 @@
 <template>
 	<view class="product" @click="toDetail">
 		<view class="left">
-			<image :src="item.icon" mode=""></image>
+			<image class="productIcon" :src="item.icon" mode=""></image>
 		</view>
 		<view class="right">
 			<view class="list">
@@ -55,7 +55,7 @@ export default {
 		.left {
 			width: 160rpx;
 			height: 160rpx;
-			image {
+			.productIcon {
 				width: 100%;
 				height: 100%;
 			}

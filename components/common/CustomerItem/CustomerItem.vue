@@ -1,19 +1,19 @@
 <template>
 	<view class="item" @click="handleClick">
-		<image src="http://iph.href.lu/45x45?fg=666666&bg=cccccc" mode=""></image>
+		<image class="itemImg" src="http://iph.href.lu/45x45?fg=666666&bg=cccccc" mode=""></image>
 		<view class="detail">
 			<view class="name">{{items.name}}</view>
 			<view class="info">
 				<view class="order">
-					<image src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
+					<image class="icon" src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
 					{{items.order}}
 				</view>
 				<view class="now">
-					<image src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
+					<image class="icon" src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
 					{{items.now}}
 				</view>
 				<view class="money">
-					<image src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
+					<image class="icon" src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
 					{{items.money}}
 				</view>
 			</view>
@@ -49,7 +49,7 @@ export default {
 	color: #333333;
 	display: flex;
 	align-items: center;
-	image {
+	.itemImg {
 		width: 90rpx;
 		height: 90rpx;
 		margin: 0 30rpx;
@@ -65,7 +65,7 @@ export default {
 			display: flex;
 			justify-content: space-between;
 			.order, .now, .money {
-				image {
+				.icon {
 					width: 24rpx;
 					height: 24rpx;
 					margin: 0 20rpx 0 0 !important;

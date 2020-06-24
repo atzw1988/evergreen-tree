@@ -46,7 +46,7 @@
 				form-type="submit"
 				class="button"
 				:class="[{disable: disable}, {loading: loading}]">
-				<image v-if="loading" src="@/static/common/loading.png" mode=""></image>{{loading? '提交中' : '确定'}}
+				<image class="loading" v-if="loading" src="@/static/common/loading.png" mode=""></image>{{loading? '提交中' : '确定'}}
 			</button>
 		</form>
 	</view>
@@ -143,7 +143,7 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		image {
+		.loading {
 			width: 40rpx;
 			height: 40rpx;
 			margin-right: 20rpx;

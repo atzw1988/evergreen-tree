@@ -7,7 +7,7 @@
 			</view>
 			<view class="person">
 				<view class="name">{{nickName}}</view>
-				<view class="binding">绑定经纪人</view>
+				<view class="binding" @click="handleBind">绑定经纪人</view>
 			</view>
 		</view>
 		<view class="income">
@@ -78,10 +78,17 @@ export default {
 		}
 	},
 	methods: {
+		// 菜单跳转
 		handleMenu ({detail: {index}}) {
 			console.log(index)
 			router.push({
 				name: this.menu[index].name
+			})
+		},
+		// 跳转绑定经纪人
+		handleBind () {
+			this.$router.push({
+				name: 'bind'
 			})
 		}
 	}

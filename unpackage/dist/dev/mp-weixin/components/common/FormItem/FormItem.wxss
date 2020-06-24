@@ -34,7 +34,7 @@
   -webkit-justify-content: center;
           justify-content: center;
 }
-.formPage .button image.data-v-783ad042 {
+.formPage .button .loading.data-v-783ad042 {
   width: 40rpx;
   height: 40rpx;
   margin-right: 20rpx;

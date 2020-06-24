@@ -1,0 +1,10 @@
+.customerPage.data-v-12369656 {
+  width: 100%;
+  height: 100vh;
+}
+.customerPage .itemList.data-v-12369656 {
+  width: 690rpx;
+  height: calc(100vh - 80rpx);
+  margin: 0 auto;
+}
+
