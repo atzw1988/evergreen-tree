@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "产品列表",
+  "usingComponents": {
+    "tab-list": "/components/common/TabList/TabList",
+    "product-detail": "/components/common/ProductDetail/ProductDetail"
+  }
+}

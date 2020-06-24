@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "常青树",
+  "usingComponents": {
+    "product-detail": "/components/common/ProductDetail/ProductDetail"
+  }
+}
