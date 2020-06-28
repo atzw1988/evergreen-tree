@@ -15,6 +15,12 @@
         "customerInfo/customerInfo",
         "bind/bind"
       ]
+    },
+    {
+      "root": "pages/register",
+      "pages": [
+        "examing/examing"
+      ]
     }
   ],
   "window": {

@@ -37,6 +37,14 @@ module.exports = {
 	},
 	// 绑定经纪人
 	bind: {
-		path: '/pages/person/bind/bind'
+		path: '/pages/person/customerInfo/customerInfo'
+	},
+	// 考试中
+	examing: {
+		path: '/pages/register/examing/examing'
+	},
+	// 考试结果
+	examResults: {
+		path: '/pages/register/examResults/examResults'
 	}
 }

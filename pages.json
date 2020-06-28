@@ -2,9 +2,9 @@
 	"pages": [
 		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		// {
-		// 	"path": "pages/person/bind/bind",
+		// 	"path": "pages/register/examResults/examResults",
 		// 	"style": {
-		// 		"navigationBarTitleText": "绑定经纪人"
+		// 		"navigationBarTitleText": "考试结果"
 		// 	}
 		// },
 		{
@@ -66,6 +66,17 @@
 					"path": "bind/bind",
 					"style": {
 						"navigationBarTitleText": "绑定经纪人"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/register",
+			"pages": [
+				{
+					"path": "examing/examing",
+					"style": {
+						"navigationBarTitleText": "考试中"
 					}
 				}
 			]

@@ -757,7 +757,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -7095,7 +7095,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7116,14 +7116,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7199,7 +7199,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -8140,7 +8140,15 @@ module.exports = {
 
   // 绑定经纪人
   bind: {
-    path: '/pages/person/bind/bind' } };
+    path: '/pages/person/customerInfo/customerInfo' },
+
+  // 考试中
+  examing: {
+    path: '/pages/register/examing/examing' },
+
+  // 考试结果
+  examResults: {
+    path: '/pages/register/examResults/examResults' } };
 
 /***/ }),
 /* 21 */
@@ -10004,6 +10012,95 @@ module.exports = {
   loading: loading,
   hideLoading: hideLoading };
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */
+/*!****************************************************!*\
+  !*** E:/zwd/evergreen-tree/util/data/questions.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = exports.questions = void 0; // 考试题目
+var questions = [
+{
+  qid: 1,
+  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
+  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
+  right: 1,
+  score: 10 },
+
+{
+  qid: 2,
+  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
+  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
+  right: 1,
+  score: 10 },
+
+{
+  qid: 3,
+  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
+  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
+  right: 1,
+  score: 10 },
+
+{
+  qid: 4,
+  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
+  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
+  right: 1,
+  score: 10 },
+
+{
+  qid: 5,
+  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
+  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
+  right: 1,
+  score: 10 },
+
+{
+  qid: 6,
+  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
+  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
+  right: 1,
+  score: 10 }];exports.questions = questions;var _default =
+
+
+
+{
+  questions: questions };exports.default = _default;
+
+/***/ }),
+/* 34 */
+/*!********************************************!*\
+  !*** E:/zwd/evergreen-tree/util/jutils.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// 答题判断
+function checkExam(arr, callback) {
+  var res = [];
+  var score = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == undefined) {
+      res.push(i + 1);
+    } else {
+      score += arr[i];
+    }
+  }
+  callback(res, score, res.length > 0);
+}
+
+module.exports = {
+  checkExam: checkExam };
 
 /***/ })
 ]]);

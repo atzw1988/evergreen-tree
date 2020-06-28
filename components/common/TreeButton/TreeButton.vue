@@ -3,7 +3,7 @@
 		class="btnContent"
 		@click="handleClick"
 		:class="[{disable: disable}, {loading: loading}]"
-		:style="{width: width + 'rpx', height: height + 'rpx', lineHeight: height + 'rpx'}">
+		:style="{width: width + 'rpx', height: height + 'rpx', lineHeight: height + 'rpx', margin: margin}">
 		<image class="loading" v-if="loading" src="@/static/common/loading.png" mode=""></image>{{loading? '提交中' : text}}
 	</view>
 </template>
@@ -35,6 +35,10 @@
 			text: {
 				type: String,
 				default: '确认'
+			},
+			margin: {
+				type: String,
+				default: ''
 			}
 		},
 		methods: {

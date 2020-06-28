@@ -79,5 +79,37 @@ module.exports = {
 		} else {
 			return ''
 		}
+	},
+	// 答题选择
+	checked: function (index, id) {
+		if (index == id) {
+			return 'checked'
+		} else {
+			return ''
+		}
+	},
+	// 答题倒计时
+	countDown: function (time) {
+		var m = '00'
+		var s = '00'
+		var str = ''
+		if (time < 60) {
+			str = m + ':' + time
+		} else {
+			var a = Math.floor(time / 60)
+			var b = time % 60
+			if (a < 10) {
+				m = '0' + a
+			} else {
+				m = a
+			}
+			if (b < 10) {
+				s = '0' + b
+			} else {
+				s = b
+			}
+			str = m + ':' + s
+		}
+		return str
 	}
 }
