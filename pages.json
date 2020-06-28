@@ -78,6 +78,12 @@
 					"style": {
 						"navigationBarTitleText": "考试中"
 					}
+				},
+				{
+					"path": "examResults/examResults",
+					"style": {
+						"navigationBarTitleText": "考试结果"
+					}
 				}
 			]
 		}

@@ -19,7 +19,8 @@
     {
       "root": "pages/register",
       "pages": [
-        "examing/examing"
+        "examing/examing",
+        "examResults/examResults"
       ]
     }
   ],

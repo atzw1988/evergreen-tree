@@ -42,7 +42,11 @@ export default {
 				clearInterval(this.timeTick)
 				this.$base.dT('考试时间结束')
 				setTimeout(() => {
-					console.log('跳转考试结果')
+					checkExam(this.result, (res, score, boolean) => {
+						console.log(score, '跳转考试结果')
+						clearInterval(this.timeTick)
+						this.toExamResults(score)
+					})
 				}, 2000)
 			}
 		}
@@ -70,7 +74,15 @@ export default {
 				} else {
 					console.log(score, '跳转考试结果')
 					clearInterval(this.timeTick)
+					this.toExamResults(score)
 				}
+			})
+		},
+		// 跳转考试结果
+		toExamResults (score) {
+			this.$router.push({
+				name: 'examResults',
+				data: score
 			})
 		}
 	}

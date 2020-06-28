@@ -1,5 +1,33 @@
 .examResults.data-v-4c106753 {
   width: 100%;
   height: 100vh;
+  background-color: #FFFFFF;
+}
+.examResults view.data-v-4c106753 {
+  width: 100%;
+  text-align: center;
+}
+.examResults .examImg.data-v-4c106753 {
+  display: block;
+  width: 360rpx;
+  height: 480rpx;
+  margin: 84rpx auto 0;
+}
+.examResults .score.data-v-4c106753 {
+  font-size: 52rpx;
+  font-weight: bold;
+  color: #F3AB42;
+  margin-top: 20rpx;
+}
+.examResults .resText.data-v-4c106753 {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #00D6C0;
+  margin: 20rpx 0 120rpx;
+}
+.examResults .tips.data-v-4c106753 {
+  font-size: 28rpx;
+  color: #BCC2CC;
+  margin-top: 30rpx;
 }
 
