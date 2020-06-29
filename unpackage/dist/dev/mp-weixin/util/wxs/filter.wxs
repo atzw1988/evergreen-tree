@@ -111,5 +111,13 @@ module.exports = {
 			str = m + ':' + s
 		}
 		return str
+	},
+	placeholder: function (str) {
+		console.log(str)
+		if (str) {
+			return str
+		} else {
+			return '请选择'
+		}
 	}
 }

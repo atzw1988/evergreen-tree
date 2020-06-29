@@ -8,7 +8,8 @@
 /*通用 */
 view{
 	font-size:28rpx;
-	line-height:1.8;
+	line-height:1.5;
+	color: #333333;
 }
 progress, checkbox-group{
 	width: 100%;

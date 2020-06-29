@@ -10,11 +10,20 @@
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
   border-bottom: 1rpx solid #F7F7F7;
 }
 .formPage .formItem .formLabel.data-v-783ad042 {
-  width: 160rpx;
   padding: 24rpx 0;
+}
+.formPage .formItem .pickerText.data-v-783ad042 {
+  padding: 0;
+  text-align: right;
+}
+.formPage .formItem .placeholder.data-v-783ad042 {
+  color: #777777;
 }
 .formPage .button.data-v-783ad042 {
   width: 690rpx;
@@ -33,6 +42,7 @@
   -webkit-box-pack: center;
   -webkit-justify-content: center;
           justify-content: center;
+  margin-bottom: 40rpx;
 }
 .formPage .button .loading.data-v-783ad042 {
   width: 40rpx;

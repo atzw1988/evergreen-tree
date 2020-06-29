@@ -1,0 +1,33 @@
+.steps.data-v-035d3653 {
+  width: 100%;
+  height: 96rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  position: relative;
+}
+.steps .list.data-v-035d3653 {
+  width: 96rpx;
+  height: 96rpx;
+  z-index: 1001;
+}
+.steps .list .Active.data-v-035d3653 {
+  width: 96rpx;
+  height: 96rpx;
+}
+.steps .list .default.data-v-035d3653 {
+  width: 76rpx;
+  height: 76rpx;
+  margin: 10rpx;
+}
+.steps .progress.data-v-035d3653 {
+  position: absolute;
+  width: 554rpx;
+  margin-left: 48rpx;
+  margin-top: 47rpx;
+  z-index: 1000;
+}
+

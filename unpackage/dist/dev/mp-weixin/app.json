@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/register/card/card",
     "pages/home/home",
     "pages/product/product",
     "pages/team/team",
@@ -14,13 +15,6 @@
         "order/order",
         "customerInfo/customerInfo",
         "bind/bind"
-      ]
-    },
-    {
-      "root": "pages/register",
-      "pages": [
-        "examing/examing",
-        "examResults/examResults"
       ]
     }
   ],

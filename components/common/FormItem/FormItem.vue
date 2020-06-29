@@ -3,8 +3,8 @@
 		<form @submit="formSubmit">
 			<block v-for="(item, index) in formList" :key="index">
 				<view class="formItem" v-if="item.kind == 'input'">
-					<view class="formLabel">{{item.lable}}</view>
-					<view class="itemBox">
+					<view class="formLabel" :style="{width: width + 'rpx'}">{{item.lable}}</view>
+					<view class="itemBox" :style="{width: `${620 -width}rpx`}">
 						<input
 							class="input"
 							:name="item.name"
@@ -12,32 +12,44 @@
 					</view>
 				</view>
 				<view class="formItem" v-if="item.kind == 'picker'">
-					<view class="formLabel">{{item.lable}}</view>
-					<view class="itemBox">
+					<view
+						class="formLabel"
+						:style="{width: width + 'rpx'}">{{item.lable}}</view>
+					<view class="itemBox" :style="{width: `${620 -width}rpx`}">
 						<picker
+							:id="index"
 							@change="bindPickerChange"
-							:value="id"
 							:range="item.array"
+							range-key="name"
 							v-if="item.mode == 'selector'">
-							<view class="uni-input">{{item.array[id]}}</view>
+							<view
+								:class="[{placeholder: !picker[item.name].name}]"
+								class="pickerText">{{picker[item.name].name || item.placeholder}}</view>
+								<!-- {{item.array[idList[item.name]].name || item.placeholder}} -->
 						</picker>
 						<picker
+							:id="index"
 							mode="time"
 							:value="time"
 							start="09:01"
 							end="21:01"
 							@change="bindTimeChange"
 							v-if="item.mode == 'time'">
-							<view class="uni-input">{{time}}</view>
+							<view
+								:class="[{placeholder: !time}]"
+								class="pickerText">{{time}}</view>
 						</picker>
 						<picker
+							:id="index"
 							mode="date"
 							:value="date"
 							:start="startDate"
 							:end="endDate"
 							@change="bindDateChange"
-							v-if="item.mode == 'date'">>
-							<view class="uni-input">{{date}}</view>
+							v-if="item.mode == 'date'">
+							<view
+								:class="[{placeholder: !date}]"
+								class="pickerText">{{picker[item.name] || item.placeholder}}</view>
 						</picker>
 					</view>
 				</view>
@@ -46,7 +58,7 @@
 				form-type="submit"
 				class="button"
 				:class="[{disable: disable}, {loading: loading}]">
-				<image class="loading" v-if="loading" src="@/static/common/loading.png" mode=""></image>{{loading? '提交中' : '确定'}}
+				<image class="loading" v-if="loading" src="@/static/common/loading.png" mode=""></image>{{loading? '提交中' : text}}
 			</button>
 		</form>
 	</view>
@@ -63,17 +75,38 @@ export default {
 		loading: {
 			type: Boolean,
 			default: false
+		},
+		width: {
+			type: Number,
+			default: 160
+		},
+		text: {
+			type: String,
+			default: '确定'
+		},
+		img: {
+			type: Object,
+			default: () => { return {} }
 		}
 	},
 	data () {
 		return {
-			id: 0,
+			id: '1',
 			time: '12:00',
-			date: '2020-06-05'
+			date: '',
+			picker: {
+				cardkind: '',
+				onjob: '',
+				politics: '',
+				education: '',
+				start: '',
+				end: ''
+			}
 		}
 	},
 	methods: {
 		formSubmit ({detail:{value}}) {
+			value = Object.assign(value, this.picker, this.img)
 			console.log(value)
 			const len = this.formList.length
 			for (let i = 0; i < len; i++) {
@@ -105,14 +138,19 @@ export default {
 			}
 			this.$emit('submit', value)
 		},
-		bindPickerChange (e) {
-			console.log(e)
+		bindPickerChange ({currentTarget: {id}, detail: {value}}) {
+			console.log(id, value)
+			console.log(this.formList[id].array)
+			const item = this.formList[id]
+			this.picker[item.name] = item.array[value]
 		},
 		bindTimeChange (e) {
 			console.log(e)
 		},
-		bindDateChange (e) {
-			console.log(e)
+		bindDateChange ({currentTarget: {id}, detail: {value}}) {
+			console.log(id)
+			const item = this.formList[id]
+			this.picker[item.name] = value
 		}
 	}
 }
@@ -126,10 +164,17 @@ export default {
 		margin: 0 auto;
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		border-bottom: 1rpx solid #F7F7F7;
 		.formLabel {
-			width: 160rpx;
 			padding: 24rpx 0;
+		}
+		.pickerText {
+			padding: 0;
+			text-align: right;
+		}
+		.placeholder {
+			color: #777777;
 		}
 	}
 	.button {
@@ -143,6 +188,7 @@ export default {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		margin-bottom: 40rpx;
 		.loading {
 			width: 40rpx;
 			height: 40rpx;

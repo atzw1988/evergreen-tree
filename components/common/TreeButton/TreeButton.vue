@@ -3,7 +3,7 @@
 		class="btnContent"
 		@click="handleClick"
 		:class="[{disable: disable}, {loading: loading}]"
-		:style="{width: width + 'rpx', height: height + 'rpx', lineHeight: height + 'rpx', margin: margin}">
+		:style="{width: width + 'rpx', height: height + 'rpx', lineHeight: height + 'rpx', margin: margin, backgroundColor: color}">
 		<image class="loading" v-if="loading" src="@/static/common/loading.png" mode=""></image>{{loading? '提交中' : text}}
 	</view>
 </template>
@@ -39,6 +39,10 @@
 			margin: {
 				type: String,
 				default: ''
+			},
+			color: {
+				type: String,
+				default: '#00D6C0'
 			}
 		},
 		methods: {
@@ -55,7 +59,6 @@
 	font-size: 36rpx;
 	text-align: center;
 	color: #FFFFFF;
-	background-color: #00D6C0;
 	border-radius: 8rpx;
 	margin: 0 auto;
 	display: flex;

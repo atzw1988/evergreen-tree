@@ -1,6 +1,6 @@
-(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],{
-
-/***/ 1:
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],[
+/* 0 */,
+/* 1 */
 /*!************************************************************!*\
   !*** ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js ***!
   \************************************************************/
@@ -1563,475 +1563,7 @@ var uni$1 = uni;var _default =
 uni$1;exports.default = _default;
 
 /***/ }),
-
-/***/ 10:
-/*!**********************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
-  \**********************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-function normalizeComponent (
-  scriptExports,
-  render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode, /* vue-cli only */
-  components, // fixed by xxxxxx auto components
-  renderjs // fixed by xxxxxx renderjs
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // fixed by xxxxxx auto components
-  if (components) {
-    if (!options.components) {
-      options.components = {}
-    }
-    var hasOwn = Object.prototype.hasOwnProperty
-    for (var name in components) {
-      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
-        options.components[name] = components[name]
-      }
-    }
-  }
-  // fixed by xxxxxx renderjs
-  if (renderjs) {
-    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
-      this[renderjs.__module] = this
-    });
-    (options.mixins || (options.mixins = [])).push(renderjs)
-  }
-
-  // render functions
-  if (render) {
-    options.render = render
-    options.staticRenderFns = staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = 'data-v-' + scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
-      : injectStyles
-  }
-
-  if (hook) {
-    if (options.functional) {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return originalRender(h, context)
-      }
-    } else {
-      // inject component registration as beforeCreate hook
-      var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    }
-  }
-
-  return {
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
-
-/***/ 11:
-/*!*********************************************!*\
-  !*** E:/zwd/evergreen-tree/router/index.js ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var router = __webpack_require__(/*! ../util/router/index.js */ 12);
-var routes = __webpack_require__(/*! ./routes.js */ 20);
-
-router.init({
-  routes: routes });
-
-
-module.exports = router;
-
-/***/ }),
-
-/***/ 12:
-/*!**************************************************!*\
-  !*** E:/zwd/evergreen-tree/util/router/index.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _require = __webpack_require__(/*! ./data.js */ 13),encode = _require.encode,decode = _require.decode,extract = _require.extract;var _require2 =
-__webpack_require__(/*! ./forward.js */ 15),push = _require2.push,replace = _require2.replace;
-var pop = __webpack_require__(/*! ./pop.js */ 17);
-var relaunch = __webpack_require__(/*! ./relaunch.js */ 18);
-var init = __webpack_require__(/*! ./init.js */ 19);
-
-module.exports = {
-  encode: encode,
-  decode: decode,
-  extract: extract,
-  push: push,
-  replace: replace,
-  pop: pop,
-  relaunch: relaunch,
-  init: init };
-
-/***/ }),
-
-/***/ 13:
-/*!*************************************************!*\
-  !*** E:/zwd/evergreen-tree/util/router/data.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _require = __webpack_require__(/*! ./store.js */ 14),encodeKey = _require.encodeKey;
-
-/**
-                                                                      * 编码
-                                                                      * @param {object} data
-                                                                      */
-function encode(data) {
-  return encodeURIComponent(JSON.stringify(data));
-}
-
-/**
-   * 解码
-   * @param {object} code
-   */
-function decode(code) {
-  return JSON.parse(decodeURIComponent(code));
-}
-
-/**
-   * query化
-   * @param {object} obj
-   */
-function querify(obj) {
-  return Object.keys(obj).map(function (k) {
-    var v = obj[k];
-    return "".concat(k, "=").concat(v);
-  }).join('&');
-}
-
-/**
-   * 提炼数据
-   * @param {object} option
-   */
-function extract() {var option = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var data = option[encodeKey];
-  if (data) {
-    return decode(data);
-  }
-  return null;
-}
-
-module.exports = {
-  encode: encode,
-  decode: decode,
-  querify: querify,
-  extract: extract };
-
-/***/ }),
-
-/***/ 14:
-/*!**************************************************!*\
-  !*** E:/zwd/evergreen-tree/util/router/store.js ***!
-  \**************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var store = {
-  encodeKey: 'encodedData',
-  routeMap: {} };
-
-
-module.exports = store;
-
-/***/ }),
-
-/***/ 15:
-/*!****************************************************!*\
-  !*** E:/zwd/evergreen-tree/util/router/forward.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(uni) {var _require = __webpack_require__(/*! ./store.js */ 14),encodeKey = _require.encodeKey;var _require2 =
-__webpack_require__(/*! ./data.js */ 13),encode = _require2.encode,querify = _require2.querify;
-var routeParser = __webpack_require__(/*! ./routeParser.js */ 16);
-
-/**
-                                                * 跳转页面
-                                                * @param {object} routeObj { name, data, success, fail, complete }
-                                                */
-function forward() {var routeObj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};var isReplace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;var
-
-  name =
-  routeObj.name,data = routeObj.data,query = routeObj.query,success = routeObj.success,fail = routeObj.fail,complete = routeObj.complete;
-  var url = '';
-  var queryData = query || {};
-  if (!name) {
-    throw new Error('路由名称不能为空');
-  }
-  var route = routeParser(name);
-  if (!route) {
-    throw new Error('没有匹配的路由规则');
-  }
-  url = route.path;
-  if (data) {
-    queryData[encodeKey] = encode(data);
-  }
-  if (route.type !== 'tab') {
-    url += "?".concat(querify(queryData));
-  }
-  var opt = {
-    url: url,
-    success: success,
-    fail: fail,
-    complete: complete };
-
-  if (!url) {
-    throw new Error('路由url不能为空');
-  }
-  if (isReplace) {
-    uni.redirectTo(opt);
-    return;
-  }
-  switch (route.type) {
-    case 'tab':
-      uni.switchTab(opt);
-      break;
-    default:
-      uni.navigateTo(opt);
-      break;}
-
-}
-
-/**
-   * 前进
-   * @param {object} option
-   */
-function push(option) {
-  return forward.call(this, option);
-}
-
-/**
-   * 替换
-   * @param {object} option
-   */
-function replace(option) {
-  return forward.call(this, option, true);
-}
-
-module.exports = {
-  push: push,
-  replace: replace };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 16:
-/*!********************************************************!*\
-  !*** E:/zwd/evergreen-tree/util/router/routeParser.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _require = __webpack_require__(/*! ./store.js */ 14),routeMap = _require.routeMap;
-
-/**
-                                                                    * 路由名称转路径
-                                                                    * @param {string} name 路由名
-                                                                    */
-function name2path(name) {
-  return name.replace(/\./g, '/').replace(/\B([A-Z])/g, '_$1').toLowerCase();
-}
-
-/**
-   * 路由解析
-   * @param {string} name 路由名
-   */
-function parser(name) {
-  if (!name) {
-    throw new Error('路由名字不能为空');
-  }
-  var route = routeMap[name];
-  if (!route) {
-    var path = "/pages/".concat(name2path(name), "/").concat(name2path(name));
-    route = routeMap[path] || {
-      type: 'page',
-      path: path };
-
-  }
-  return route;
-}
-
-module.exports = parser;
-
-/***/ }),
-
-/***/ 17:
-/*!************************************************!*\
-  !*** E:/zwd/evergreen-tree/util/router/pop.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(uni) {/**
- * 返回
- * @param {object} option { delta }
- */
-function pop(option) {
-  uni.navigateBack(option);
-}
-
-module.exports = pop;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 18:
-/*!*****************************************************!*\
-  !*** E:/zwd/evergreen-tree/util/router/relaunch.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(uni) {var _require = __webpack_require__(/*! ./store.js */ 14),encodeKey = _require.encodeKey;var _require2 =
-__webpack_require__(/*! ./data.js */ 13),encode = _require2.encode,querify = _require2.querify;
-var routeParser = __webpack_require__(/*! ./routeParser.js */ 16);
-
-/**
-                                                * 关闭所有页面，打开到应用内的某个页面
-                                                * @param {object} routeObj { name, data, success, fail, complete }
-                                                */
-function relaunch() {var routeObj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};var
-
-  name =
-  routeObj.name,data = routeObj.data,query = routeObj.query,success = routeObj.success,fail = routeObj.fail,complete = routeObj.complete;
-  var url = '';
-  var queryData = query || {};
-  if (!name) {
-    throw new Error('路由名称不能为空');
-  }
-  var route = routeParser(name);
-  if (!route) {
-    throw new Error('没有匹配的路由规则');
-  }
-  url = route.path;
-  if (data) {
-    queryData[encodeKey] = encode(data);
-  }
-  if (route.type !== 'tab') {
-    url += "?".concat(querify(queryData));
-  }
-  if (!url) {
-    throw new Error('路由url不能为空');
-  }
-  uni.reLaunch({
-    url: url,
-    success: success,
-    fail: fail,
-    complete: complete });
-
-}
-
-module.exports = relaunch;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 19:
-/*!*************************************************!*\
-  !*** E:/zwd/evergreen-tree/util/router/init.js ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _require = __webpack_require__(/*! ./store.js */ 14),routeMap = _require.routeMap;
-
-/**
-                                                                    * 初始化方法
-                                                                    * @param {object} opt
-                                                                    */
-function init() {var opt = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};var
-  routes = opt.routes;
-  if (routes) {
-    Object.keys(routes).map(function (key) {
-      var route = routes[key];
-      routeMap[key] = route;
-      if (route.path) {
-        routeMap[route.path] = route;
-      }
-      return key;
-    });
-  }
-}
-
-module.exports = init;
-
-/***/ }),
-
-/***/ 2:
+/* 2 */
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
   \******************************************************************************************/
@@ -8060,8 +7592,509 @@ internalMixin(Vue);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../webpack/buildin/global.js */ 3)))
 
 /***/ }),
+/* 3 */
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-/***/ 20:
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+/* 4 */
+/*!****************************************!*\
+  !*** E:/zwd/evergreen-tree/pages.json ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/runtime/componentNormalizer.js ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode, /* vue-cli only */
+  components, // fixed by xxxxxx auto components
+  renderjs // fixed by xxxxxx renderjs
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // fixed by xxxxxx auto components
+  if (components) {
+    if (!options.components) {
+      options.components = {}
+    }
+    var hasOwn = Object.prototype.hasOwnProperty
+    for (var name in components) {
+      if (hasOwn.call(components, name) && !hasOwn.call(options.components, name)) {
+        options.components[name] = components[name]
+      }
+    }
+  }
+  // fixed by xxxxxx renderjs
+  if (renderjs) {
+    (renderjs.beforeCreate || (renderjs.beforeCreate = [])).unshift(function() {
+      this[renderjs.__module] = this
+    });
+    (options.mixins || (options.mixins = [])).push(renderjs)
+  }
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 11 */
+/*!*********************************************!*\
+  !*** E:/zwd/evergreen-tree/router/index.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var router = __webpack_require__(/*! ../util/router/index.js */ 12);
+var routes = __webpack_require__(/*! ./routes.js */ 20);
+
+router.init({
+  routes: routes });
+
+
+module.exports = router;
+
+/***/ }),
+/* 12 */
+/*!**************************************************!*\
+  !*** E:/zwd/evergreen-tree/util/router/index.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _require = __webpack_require__(/*! ./data.js */ 13),encode = _require.encode,decode = _require.decode,extract = _require.extract;var _require2 =
+__webpack_require__(/*! ./forward.js */ 15),push = _require2.push,replace = _require2.replace;
+var pop = __webpack_require__(/*! ./pop.js */ 17);
+var relaunch = __webpack_require__(/*! ./relaunch.js */ 18);
+var init = __webpack_require__(/*! ./init.js */ 19);
+
+module.exports = {
+  encode: encode,
+  decode: decode,
+  extract: extract,
+  push: push,
+  replace: replace,
+  pop: pop,
+  relaunch: relaunch,
+  init: init };
+
+/***/ }),
+/* 13 */
+/*!*************************************************!*\
+  !*** E:/zwd/evergreen-tree/util/router/data.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _require = __webpack_require__(/*! ./store.js */ 14),encodeKey = _require.encodeKey;
+
+/**
+                                                                      * 编码
+                                                                      * @param {object} data
+                                                                      */
+function encode(data) {
+  return encodeURIComponent(JSON.stringify(data));
+}
+
+/**
+   * 解码
+   * @param {object} code
+   */
+function decode(code) {
+  return JSON.parse(decodeURIComponent(code));
+}
+
+/**
+   * query化
+   * @param {object} obj
+   */
+function querify(obj) {
+  return Object.keys(obj).map(function (k) {
+    var v = obj[k];
+    return "".concat(k, "=").concat(v);
+  }).join('&');
+}
+
+/**
+   * 提炼数据
+   * @param {object} option
+   */
+function extract() {var option = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var data = option[encodeKey];
+  if (data) {
+    return decode(data);
+  }
+  return null;
+}
+
+module.exports = {
+  encode: encode,
+  decode: decode,
+  querify: querify,
+  extract: extract };
+
+/***/ }),
+/* 14 */
+/*!**************************************************!*\
+  !*** E:/zwd/evergreen-tree/util/router/store.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var store = {
+  encodeKey: 'encodedData',
+  routeMap: {} };
+
+
+module.exports = store;
+
+/***/ }),
+/* 15 */
+/*!****************************************************!*\
+  !*** E:/zwd/evergreen-tree/util/router/forward.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(uni) {var _require = __webpack_require__(/*! ./store.js */ 14),encodeKey = _require.encodeKey;var _require2 =
+__webpack_require__(/*! ./data.js */ 13),encode = _require2.encode,querify = _require2.querify;
+var routeParser = __webpack_require__(/*! ./routeParser.js */ 16);
+
+/**
+                                                * 跳转页面
+                                                * @param {object} routeObj { name, data, success, fail, complete }
+                                                */
+function forward() {var routeObj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};var isReplace = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;var
+
+  name =
+  routeObj.name,data = routeObj.data,query = routeObj.query,success = routeObj.success,fail = routeObj.fail,complete = routeObj.complete;
+  var url = '';
+  var queryData = query || {};
+  if (!name) {
+    throw new Error('路由名称不能为空');
+  }
+  var route = routeParser(name);
+  if (!route) {
+    throw new Error('没有匹配的路由规则');
+  }
+  url = route.path;
+  if (data) {
+    queryData[encodeKey] = encode(data);
+  }
+  if (route.type !== 'tab') {
+    url += "?".concat(querify(queryData));
+  }
+  var opt = {
+    url: url,
+    success: success,
+    fail: fail,
+    complete: complete };
+
+  if (!url) {
+    throw new Error('路由url不能为空');
+  }
+  if (isReplace) {
+    uni.redirectTo(opt);
+    return;
+  }
+  switch (route.type) {
+    case 'tab':
+      uni.switchTab(opt);
+      break;
+    default:
+      uni.navigateTo(opt);
+      break;}
+
+}
+
+/**
+   * 前进
+   * @param {object} option
+   */
+function push(option) {
+  return forward.call(this, option);
+}
+
+/**
+   * 替换
+   * @param {object} option
+   */
+function replace(option) {
+  return forward.call(this, option, true);
+}
+
+module.exports = {
+  push: push,
+  replace: replace };
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 16 */
+/*!********************************************************!*\
+  !*** E:/zwd/evergreen-tree/util/router/routeParser.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _require = __webpack_require__(/*! ./store.js */ 14),routeMap = _require.routeMap;
+
+/**
+                                                                    * 路由名称转路径
+                                                                    * @param {string} name 路由名
+                                                                    */
+function name2path(name) {
+  return name.replace(/\./g, '/').replace(/\B([A-Z])/g, '_$1').toLowerCase();
+}
+
+/**
+   * 路由解析
+   * @param {string} name 路由名
+   */
+function parser(name) {
+  if (!name) {
+    throw new Error('路由名字不能为空');
+  }
+  var route = routeMap[name];
+  if (!route) {
+    var path = "/pages/".concat(name2path(name), "/").concat(name2path(name));
+    route = routeMap[path] || {
+      type: 'page',
+      path: path };
+
+  }
+  return route;
+}
+
+module.exports = parser;
+
+/***/ }),
+/* 17 */
+/*!************************************************!*\
+  !*** E:/zwd/evergreen-tree/util/router/pop.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(uni) {/**
+ * 返回
+ * @param {object} option { delta }
+ */
+function pop(option) {
+  uni.navigateBack(option);
+}
+
+module.exports = pop;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 18 */
+/*!*****************************************************!*\
+  !*** E:/zwd/evergreen-tree/util/router/relaunch.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(uni) {var _require = __webpack_require__(/*! ./store.js */ 14),encodeKey = _require.encodeKey;var _require2 =
+__webpack_require__(/*! ./data.js */ 13),encode = _require2.encode,querify = _require2.querify;
+var routeParser = __webpack_require__(/*! ./routeParser.js */ 16);
+
+/**
+                                                * 关闭所有页面，打开到应用内的某个页面
+                                                * @param {object} routeObj { name, data, success, fail, complete }
+                                                */
+function relaunch() {var routeObj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};var
+
+  name =
+  routeObj.name,data = routeObj.data,query = routeObj.query,success = routeObj.success,fail = routeObj.fail,complete = routeObj.complete;
+  var url = '';
+  var queryData = query || {};
+  if (!name) {
+    throw new Error('路由名称不能为空');
+  }
+  var route = routeParser(name);
+  if (!route) {
+    throw new Error('没有匹配的路由规则');
+  }
+  url = route.path;
+  if (data) {
+    queryData[encodeKey] = encode(data);
+  }
+  if (route.type !== 'tab') {
+    url += "?".concat(querify(queryData));
+  }
+  if (!url) {
+    throw new Error('路由url不能为空');
+  }
+  uni.reLaunch({
+    url: url,
+    success: success,
+    fail: fail,
+    complete: complete });
+
+}
+
+module.exports = relaunch;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 19 */
+/*!*************************************************!*\
+  !*** E:/zwd/evergreen-tree/util/router/init.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _require = __webpack_require__(/*! ./store.js */ 14),routeMap = _require.routeMap;
+
+/**
+                                                                    * 初始化方法
+                                                                    * @param {object} opt
+                                                                    */
+function init() {var opt = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};var
+  routes = opt.routes;
+  if (routes) {
+    Object.keys(routes).map(function (key) {
+      var route = routes[key];
+      routeMap[key] = route;
+      if (route.path) {
+        routeMap[route.path] = route;
+      }
+      return key;
+    });
+  }
+}
+
+module.exports = init;
+
+/***/ }),
+/* 20 */
 /*!**********************************************!*\
   !*** E:/zwd/evergreen-tree/router/routes.js ***!
   \**********************************************/
@@ -8115,11 +8148,14 @@ module.exports = {
 
   // 考试结果
   examResults: {
-    path: '/pages/register/examResults/examResults' } };
+    path: '/pages/register/examResults/examResults' },
+
+  // 签名确认
+  signature: {
+    path: '/pages/register/signature/signature' } };
 
 /***/ }),
-
-/***/ 21:
+/* 21 */
 /*!********************************************!*\
   !*** E:/zwd/evergreen-tree/store/index.js ***!
   \********************************************/
@@ -8203,8 +8239,7 @@ store;exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
-
-/***/ 22:
+/* 22 */
 /*!*********************************************************************************************!*\
   !*** ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator/index.js ***!
   \*********************************************************************************************/
@@ -8214,8 +8249,7 @@ store;exports.default = _default;
 module.exports = __webpack_require__(/*! regenerator-runtime */ 23);
 
 /***/ }),
-
-/***/ 23:
+/* 23 */
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -8262,93 +8296,7 @@ if (hadRuntime) {
 
 
 /***/ }),
-
-/***/ 230:
-/*!****************************************************!*\
-  !*** E:/zwd/evergreen-tree/util/data/questions.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = exports.questions = void 0; // 考试题目
-var questions = [
-{
-  qid: 1,
-  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
-  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
-  right: 1,
-  score: 10 },
-
-{
-  qid: 2,
-  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
-  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
-  right: 1,
-  score: 10 },
-
-{
-  qid: 3,
-  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
-  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
-  right: 1,
-  score: 10 },
-
-{
-  qid: 4,
-  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
-  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
-  right: 1,
-  score: 10 },
-
-{
-  qid: 5,
-  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
-  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
-  right: 1,
-  score: 10 },
-
-{
-  qid: 6,
-  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
-  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
-  right: 1,
-  score: 10 }];exports.questions = questions;var _default =
-
-
-
-{
-  questions: questions };exports.default = _default;
-
-/***/ }),
-
-/***/ 231:
-/*!********************************************!*\
-  !*** E:/zwd/evergreen-tree/util/jutils.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// 答题判断
-function checkExam(arr, callback) {
-  var res = [];
-  var score = 0;
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] == undefined) {
-      res.push(i + 1);
-    } else {
-      score += arr[i];
-    }
-  }
-  callback(res, score, res.length > 0);
-}
-
-module.exports = {
-  checkExam: checkExam };
-
-/***/ }),
-
-/***/ 24:
+/* 24 */
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -9079,8 +9027,7 @@ module.exports = {
 
 
 /***/ }),
-
-/***/ 25:
+/* 25 */
 /*!********************************************!*\
   !*** ./node_modules/vuex/dist/vuex.esm.js ***!
   \********************************************/
@@ -10030,8 +9977,7 @@ var index_esm = {
 
 
 /***/ }),
-
-/***/ 26:
+/* 26 */
 /*!******************************************!*\
   !*** E:/zwd/evergreen-tree/util/base.js ***!
   \******************************************/
@@ -10071,49 +10017,6 @@ module.exports = {
   hideLoading: hideLoading };
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
-/***/ }),
-
-/***/ 3:
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ 4:
-/*!****************************************!*\
-  !*** E:/zwd/evergreen-tree/pages.json ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
 /***/ })
-
-}]);
+]]);
 //# sourceMappingURL=../../.sourcemap/mp-weixin/common/vendor.js.map

@@ -46,5 +46,9 @@ module.exports = {
 	// 考试结果
 	examResults: {
 		path: '/pages/register/examResults/examResults'
+	},
+	// 签名确认
+	signature: {
+		path: '/pages/register/signature/signature'
 	}
 }

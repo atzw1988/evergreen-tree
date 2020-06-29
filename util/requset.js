@@ -15,7 +15,7 @@ const request = (url, data, method) => {
 		uni.request({
 			url: _url,
 			header: header,
-			method:: method,
+			method: method,
 			data: data,
 			success: (res) => {
 				if (res.statusCode >=200 && res.statusCode < 300 || res.statusCode == 304) {
@@ -30,6 +30,30 @@ const request = (url, data, method) => {
 	})
 }
 
+const upload = (url, data) => {
+	const _url = API_UPLOAD_URL + url
+	return new Promise((resolve, reject) => {
+		uni.uploadFile({
+			url: _url,
+			filePath: data,
+			name: 'file',
+			header: {
+				'Content-Type': 'multipart/form-data;charset=utf-8'
+			},
+			success: (res) => {
+				if (res.statusCode >=200 && res.statusCode < 300 || res.statusCode == 304) {
+					resolve(res.data)
+				}
+			},
+			fail: (error) => {
+				tips.alert('网络链接错误，请稍后重试')
+				reject(error)
+			}
+		})
+	})
+}
+
 module.exports = {
-	request
+	request,
+	upload
 }
