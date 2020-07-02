@@ -2,6 +2,7 @@ var kindList = ['', '意外险', '健康险', '财险', '人寿险']
 var statusMap = ['success', 'waiting', 'fail']
 var statusTextMap = ['交易成功', '等待支付', '交易失败']
 var orderMap = ['在保', '失效']
+var inviteMap = ['已出单', '未出单']
 module.exports = {
 	moneyFormat: function (money) {
 		console.log(money)
@@ -119,5 +120,8 @@ module.exports = {
 		} else {
 			return '请选择'
 		}
+	},
+	invite: function (status) {
+		return inviteMap[status]
 	}
 }

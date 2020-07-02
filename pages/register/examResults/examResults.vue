@@ -17,8 +17,8 @@ export default {
 		}
 	},
 	onLoad (options) {
-		console.log(this.$router.extract(options))
-		this.score = this.$router.extract(options)
+		console.log(this.$_router.extract(options))
+		this.score = this.$_router.extract(options)
 	}
 }
 </script>
@@ -27,7 +27,6 @@ export default {
 .examResults {
 	width: 100%;
 	height: 100vh;
-	background-color: #FFFFFF;
 	view {
 		width: 100%;
 		text-align: center;

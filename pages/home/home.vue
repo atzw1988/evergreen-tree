@@ -4,7 +4,7 @@
 			<image src="@/static/home/banner.png" mode=""></image>
 		</view>
 		<view class="menuList">
-			<view v-for="(item,index) in menuList" :key="index" class="menuBox">
+			<view v-for="(item,index) in menuList" :key="index" class="menuBox" @click="handleMenu(item.menu)">
 				<image :src="item.icon" mode=""></image>
 				<view class="titleName">{{item.name}}</view>
 			</view>
@@ -21,11 +21,13 @@
 				<ProductDetail :item="item"></ProductDetail>
 			</block>
 		</view>
+		<Notify id="notify"></Notify>
 	</scroll-view>
 </template>
 
 <script>
 import ProductDetail from '../../components/common/ProductDetail/ProductDetail.vue'
+import { getStep } from '@/util/api.js'
 export default {
 	components: {
 		ProductDetail
@@ -35,18 +37,22 @@ export default {
 			menuList: [
 				{
 					name: '产品',
+					menu: 'product',
 					icon: '../../static/home/productList.png'
 				},
 				{
 					name: '订单',
+					menu: 'order',
 					icon: '../../static/home/orderList.png'
 				},
 				{
 					name: '团队',
+					menu: 'team',
 					icon: '../../static/home/teams.png'
 				},
 				{
 					name: '客户',
+					menu: 'customer',
 					icon: '../../static/home/customer.png'
 				}
 			],
@@ -81,15 +87,41 @@ export default {
 				}
 			]
 		}
+	},
+	onShow () {
+		this.getStep()
+	},
+	methods: {
+		// 跳转菜单
+		handleMenu (menu) {
+			console.log(menu)
+			this.$base.sM('测试通知')
+			// this.$_router.push({
+			// 	name: menu
+			// })
+		},
+		// 获取步数
+		async getStep () {
+			const params = {
+				month: '2020-06',
+				userId: '2725'
+			}
+			let res = await getStep(params)
+			console.log(res)
+		}
 	}
 }
 </script>
 
 <style lang="less" scoped>
+	/* #ifdef H5 */
+	.homePage {
+		height: calc(100vh - 188rpx) !important;
+	}	
+	/* #endif */
 	.homePage {
 		width: 100%;
 		height: 100vh;
-		background-color: #FFFFFF;
 		color: #333333;
 		.banner {
 			width: 690rpx;

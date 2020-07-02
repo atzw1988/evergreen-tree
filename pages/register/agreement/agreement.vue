@@ -55,7 +55,6 @@ export default {
 .agreementPage {
 	width: 100%;
 	height: 100vh;
-	background-color: #FFFFFF;
 	.steps {
 		width: 650rpx;
 		margin: 0 auto;

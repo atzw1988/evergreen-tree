@@ -85,7 +85,7 @@
     -webkit-transform: rotate(360deg);
 }
 }
-.formPage .loading.data-v-783ad042 {
+.formPage .isLoading.data-v-783ad042 {
   opacity: 0.4;
 }
 .formPage .disable.data-v-783ad042 {

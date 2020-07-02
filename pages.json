@@ -1,12 +1,12 @@
 {
 	"pages": [
 		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/register/card/card",
-			"style": {
-				"navigationBarTitleText": "银行信息"
-			}
-		},
+		// {
+		// 	"path": "pages/register/begin/begin",
+		// 	"style": {
+		// 		"navigationBarTitleText": "申请经纪人"
+		// 	}
+		// },
 		{
 			"path":"pages/home/home",
 			"style": {
@@ -30,6 +30,12 @@
 			"path":"pages/mine/mine",
 			"style": {
 				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/registered/registered",
+			"style": {
+				"navigationBarTitleText": "注册"
 			}
 		}
 	],
@@ -67,44 +73,80 @@
 					"style": {
 						"navigationBarTitleText": "绑定经纪人"
 					}
+				},
+				{
+					"path": "service/service",
+					"style": {
+						"navigationBarTitleText": "客服中心"
+					}
+				},
+				{
+					"path": "invite/invite",
+					"style": {
+						"navigationBarTitleText": "邀请好友"
+					}
+				},
+				{
+					"path": "inviteDetail/inviteDetail",
+					"style": {
+						"navigationBarTitleText": "邀请明细"
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/register",
+			"pages": [
+				{
+					"path": "begin/begin",
+					"style": {
+						"navigationBarTitleText": "申请经纪人"
+					}
+				},
+				{
+					"path": "examing/examing",
+					"style": {
+						"navigationBarTitleText": "考试中"
+					}
+				},
+				{
+					"path": "examResults/examResults",
+					"style": {
+						"navigationBarTitleText": "考试结果"
+					}
+				},
+				{
+					"path": "signature/signature",
+					"style": {
+						"navigationBarTitleText": "签名确认"
+					}
+				},
+				{
+					"path": "agreement/agreement",
+					"style": {
+						"navigationBarTitleText": "签订协议"
+					}
+				},
+				{
+					"path": "certificate/certificate",
+					"style": {
+						"navigationBarTitleText": "身份认证"
+					}
+				},
+				{
+					"path": "card/card",
+					"style": {
+						"navigationBarTitleText": "银行信息"
+					}
+				},
+				{
+					"path": "audit/audit",
+					"style": {
+						"navigationBarTitleText": "等待审核"
+					}
 				}
 			]
 		}
-		// {
-		// 	"root": "pages/register",
-		// 	"pages": [
-		// 		{
-		// 			"path": "examing/examing",
-		// 			"style": {
-		// 				"navigationBarTitleText": "考试中"
-		// 			}
-		// 		},
-		// 		{
-		// 			"path": "examResults/examResults",
-		// 			"style": {
-		// 				"navigationBarTitleText": "考试结果"
-		// 			}
-		// 		},
-		// 		{
-		// 			"path": "signature/signature",
-		// 			"style": {
-		// 				"navigationBarTitleText": "签名确认"
-		// 			}
-		// 		},
-		// 		{
-		// 			"path": "agreement/agreement",
-		// 			"style": {
-		// 				"navigationBarTitleText": "签订协议"
-		// 			}
-		// 		},
-		// 		{
-		// 			"path": "certificate/certificate",
-		// 			"style": {
-		// 				"navigationBarTitleText": "身份认证"
-		// 			}
-		// 		}
-		// 	]
-		// }
 	],
 	"preloadRule": {
 		"pages/mine/mine": {

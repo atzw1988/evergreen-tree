@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var ProductDetail = function ProductDetail() {__webpack_require__.e(/*! require.ensure | components/common/ProductDetail/ProductDetail */ "components/common/ProductDetail/ProductDetail").then((function () {return resolve(__webpack_require__(/*! ../../components/common/ProductDetail/ProductDetail.vue */ 138));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@vue/babel-preset-app/node_modules/@babel/runtime/regenerator */ 22));
 
 
 
@@ -158,6 +158,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+var _api = __webpack_require__(/*! @/util/api.js */ 357);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var ProductDetail = function ProductDetail() {__webpack_require__.e(/*! require.ensure | components/common/ProductDetail/ProductDetail */ "components/common/ProductDetail/ProductDetail").then((function () {return resolve(__webpack_require__(/*! ../../components/common/ProductDetail/ProductDetail.vue */ 101));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   components: {
     ProductDetail: ProductDetail },
@@ -167,18 +169,22 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       menuList: [
       {
         name: '产品',
+        menu: 'product',
         icon: '../../static/home/productList.png' },
 
       {
         name: '订单',
+        menu: 'order',
         icon: '../../static/home/orderList.png' },
 
       {
         name: '团队',
+        menu: 'team',
         icon: '../../static/home/teams.png' },
 
       {
         name: '客户',
+        menu: 'customer',
         icon: '../../static/home/customer.png' }],
 
 
@@ -213,7 +219,28 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-  } };exports.default = _default;
+  },
+  onShow: function onShow() {
+    this.getStep();
+  },
+  methods: {
+    // 跳转菜单
+    handleMenu: function handleMenu(menu) {
+      console.log(menu);
+      this.$base.sM('测试通知');
+      // this.$_router.push({
+      // 	name: menu
+      // })
+    },
+    // 获取步数
+    getStep: function getStep() {return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var params, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+                params = {
+                  month: '2020-06',
+                  userId: '2725' };_context.next = 3;return (
+
+                  (0, _api.getStep)(params));case 3:res = _context.sent;
+                console.log(res);case 5:case "end":return _context.stop();}}}, _callee);}))();
+    } } };exports.default = _default;
 
 /***/ }),
 

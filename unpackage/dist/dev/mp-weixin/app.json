@@ -1,10 +1,10 @@
 {
   "pages": [
-    "pages/register/card/card",
     "pages/home/home",
     "pages/product/product",
     "pages/team/team",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/registered/registered"
   ],
   "subPackages": [
     {
@@ -14,7 +14,23 @@
         "customer/customer",
         "order/order",
         "customerInfo/customerInfo",
-        "bind/bind"
+        "bind/bind",
+        "service/service",
+        "invite/invite",
+        "inviteDetail/inviteDetail"
+      ]
+    },
+    {
+      "root": "pages/register",
+      "pages": [
+        "begin/begin",
+        "examing/examing",
+        "examResults/examResults",
+        "signature/signature",
+        "agreement/agreement",
+        "certificate/certificate",
+        "card/card",
+        "audit/audit"
       ]
     }
   ],
@@ -75,6 +91,7 @@
     "page-head": "/components/page-head",
     "page-foot": "/components/page-foot",
     "u-link": "/components/uLink",
-    "tree-button": "/components/common/TreeButton/TreeButton"
+    "tree-button": "/components/common/TreeButton/TreeButton",
+    "notify": "/components/common/Notify/Notify"
   }
 }

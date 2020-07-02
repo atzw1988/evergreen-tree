@@ -154,11 +154,15 @@ export default {
 .productPage {
 	width: 100%;
 	height: 100vh;
-	background-color: #FFFFFF;
 	.itemList {
 		width: 690rpx;
 		margin: 0 auto;
 		height: calc(100vh - 80rpx);
 	}
+	/* #ifdef H5 */
+	.itemList {
+		height: calc(100vh - 268rpx) !important;
+	}	
+	/* #endif */
 }
 </style>

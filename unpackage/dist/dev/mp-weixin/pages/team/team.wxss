@@ -9,7 +9,7 @@
   height: 580rpx;
   background-color: #00D6C0;
   color: #FFFFFF;
-  z-index: 1000;
+  z-index: 100;
 }
 .teamPage .header .pageTitle.data-v-33711e42 {
   width: 100%;
@@ -119,7 +119,7 @@
   left: 0;
   top: 530rpx;
   border-radius: 40rpx 40rpx 0 0;
-  z-index: 1001;
+  z-index: 101;
   width: 100%;
   height: calc(100vh - 530rpx);
   background-color: #FFFFFF;

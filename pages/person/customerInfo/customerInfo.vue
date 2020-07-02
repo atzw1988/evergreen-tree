@@ -68,12 +68,12 @@ export default {
 		},
 		// 返回上一页
 		backPage () {
-			this.$router.pop()
+			this.$_router.pop()
 		}
 	},
 	onLoad (options) {
-		console.log(this.$router.extract(options))
-		this.userInfo = this.$router.extract(options)
+		console.log(this.$_router.extract(options))
+		this.userInfo = this.$_router.extract(options)
 	}
 }
 </script>
@@ -83,6 +83,7 @@ export default {
 	width: 100%;
 	height: 100vh;
 	position: relative;
+	background-color: #FAFAFA;
 	.header {
 		width: 100%;
 		height: 600rpx;
@@ -100,12 +101,11 @@ export default {
 		image {
 			width: 750rpx;
 			height: 324rpx;
-			z-index: 1000;
-		}
+			z-index: 100;		}
 		.userInfo {
 			width: 670rpx;
 			height: 320rpx;
-			z-index: 1001;
+			z-index: 101;
 			position: absolute;
 			top: 280rpx;
 			left: 40rpx;

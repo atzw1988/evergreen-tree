@@ -67,12 +67,14 @@ export default {
 				{
 					id: 3,
 					value: '帮助中心',
-					icon: 'http://iph.href.lu/44x44?fg=666666&bg=cccccc'
+					icon: 'http://iph.href.lu/44x44?fg=666666&bg=cccccc',
+					name: 'service'
 				},
 				{
 					id: 4,
 					value: '邀请',
-					icon: 'http://iph.href.lu/44x44?fg=666666&bg=cccccc'
+					icon: 'http://iph.href.lu/44x44?fg=666666&bg=cccccc',
+					name: 'invite'
 				}
 			]
 		}
@@ -87,7 +89,7 @@ export default {
 		},
 		// 跳转绑定经纪人
 		handleBind () {
-			this.$router.push({
+			this.$_router.push({
 				name: 'bind'
 			})
 		}
@@ -102,6 +104,7 @@ export default {
 	margin: 0 auto;
 	color: #333333;
 	font-size: 24rpx;
+	background-color: #FAFAFA;
 	.header {
 		width: 100%;
 		margin-top: 30rpx;

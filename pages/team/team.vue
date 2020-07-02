@@ -5,7 +5,7 @@
 			<view class="pageTitle">团队</view>
 			<view class="userInfo">
 				<view class="team">
-					<view class="portrait">
+					<view class="portrait" @click="handleClick">
 						<image src="http://iph.href.lu/45x45?fg=666666&bg=cccccc" mode=""></image>
 					</view>
 					<view class="teamName">
@@ -43,6 +43,7 @@
 				</scroll-view>
 			</view>
 		</view>
+		<Notify id="notify"></Notify>
 	</view>
 </template>
 
@@ -114,11 +115,7 @@ export default {
 	},
 	methods: {
 		handleClick () {
-			console.log(1)
-			this.loading = true
-			setTimeout(() => {
-				this.loading = false
-			}, 10000)
+			this.$base.sM('测试通知')
 		}
 	}
 }
@@ -135,7 +132,7 @@ export default {
 		height: 580rpx;
 		background-color: #00D6C0;
 		color: #FFFFFF;
-		z-index: 1000;
+		z-index: 100;
 		.pageTitle {
 			width: 100%;
 			height: 86rpx;
@@ -236,7 +233,7 @@ export default {
 		left: 0;
 		top: 530rpx;
 		border-radius: 40rpx 40rpx 0 0;
-		z-index: 1001;
+		z-index: 101;
 		width: 100%;
 		height: calc(100vh - 530rpx);
 		background-color: #FFFFFF;
@@ -291,6 +288,11 @@ export default {
 					margin-bottom: 62rpx !important;
 				}
 			}
+			/* #ifdef H5 */
+			.listItem {
+				height: calc(100% - 190rpx) !important;
+			}	
+			/* #endif */
 		}
 	}
 }

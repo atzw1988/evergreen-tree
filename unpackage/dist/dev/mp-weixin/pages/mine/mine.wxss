@@ -4,6 +4,7 @@
   margin: 0 auto;
   color: #333333;
   font-size: 24rpx;
+  background-color: #FAFAFA;
 }
 .minePage .header.data-v-7ef95a9f {
   width: 100%;

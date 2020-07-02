@@ -1,7 +1,9 @@
 const { get, remove } = require('./storage.js')
-const tips = require('tips.js')
-const router = require('router/index.js')
-const API_BASE_URL = ''
+const { environment, config } = require('./config.js')
+const tips = require('./tips.js')
+const { dT } = require('./base.js')
+const router = require('./router/index.js')
+const API_BASE_URL = environment == 'develop'? config.qaHost : config.proHost
 
 
 const request = (url, data, method) => {
@@ -10,20 +12,27 @@ const request = (url, data, method) => {
 		'Content-Type': 'application/json'
 	}
 	const token = get('token')
-	if (token) herder.Authorization = token
+	if (token) header.token = token
 	return new Promise((resolve, reject) => {
 		uni.request({
 			url: _url,
 			header: header,
 			method: method,
 			data: data,
-			success: (res) => {
-				if (res.statusCode >=200 && res.statusCode < 300 || res.statusCode == 304) {
-					resolve(res.data)
+			success: ({ statusCode, data}) => {
+				if (statusCode >=200 && statusCode < 300 || statusCode == 304) {
+					resolve(data)
+				} else if (statusCode == 401) {
+					dT('登陆过期，请重新登陆')
+					// setTimeout(() => {
+					// 	router.push({
+					// 		name: 'registered'
+					// 	})
+					// }, 2000)
 				}
 			},
 			fail: (error) => {
-				tips.alert('网络链接错误，请稍后重试')
+				dT('网络链接错误，请稍后重试')
 				reject(error)
 			}
 		})
@@ -31,7 +40,7 @@ const request = (url, data, method) => {
 }
 
 const upload = (url, data) => {
-	const _url = API_UPLOAD_URL + url
+	const _url = API_BASE_URL + url
 	return new Promise((resolve, reject) => {
 		uni.uploadFile({
 			url: _url,

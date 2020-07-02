@@ -178,6 +178,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
 var _default =
 {
   data: function data() {
@@ -245,12 +246,8 @@ var _default =
 
   },
   methods: {
-    handleClick: function handleClick() {var _this = this;
-      console.log(1);
-      this.loading = true;
-      setTimeout(function () {
-        _this.loading = false;
-      }, 10000);
+    handleClick: function handleClick() {
+      this.$base.sM('测试通知');
     } } };exports.default = _default;
 
 /***/ }),

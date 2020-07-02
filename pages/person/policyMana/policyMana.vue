@@ -68,10 +68,16 @@ export default {
 .policyManaPage {
 	width: 100%;
 	height: 100vh;
+	background-color: #FAFAFA;
 	.itemList {
 		width: 690rpx;
 		height: calc(100vh - 80rpx);
 		margin: 0 auto;
 	}
+	/* #ifdef H5 */
+	.itemList {
+		height: calc(100vh - 168rpx) !important;
+	}	
+	/* #endif */
 }
 </style>

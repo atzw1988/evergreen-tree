@@ -1,0 +1,1 @@
+<view class="beginPage data-v-6d62a912"><image class="bgImg data-v-6d62a912" src="{{src}}" mode></image><view data-event-opts="{{[['tap',[['begin',['$event']]]]]}}" class="begin data-v-6d62a912" bindtap="__e"></view></view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "考试中",
+  "usingComponents": {
+    "question-item": "/components/common/QuestionItem/QuestionItem"
+  }
+}

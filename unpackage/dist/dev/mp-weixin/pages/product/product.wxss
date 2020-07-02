@@ -1,7 +1,6 @@
 .productPage.data-v-ca59e842 {
   width: 100%;
   height: 100vh;
-  background-color: #FFFFFF;
 }
 .productPage .itemList.data-v-ca59e842 {
   width: 690rpx;

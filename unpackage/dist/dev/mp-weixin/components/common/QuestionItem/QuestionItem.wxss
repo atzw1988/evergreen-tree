@@ -1,0 +1,49 @@
+.item.data-v-6ddc0b1f {
+  width: 100%;
+  height: 760rpx;
+  background-color: #FFFFFF;
+  border-radius: 24rpx;
+  margin-top: 30rpx;
+  color: #333333;
+}
+.item .content.data-v-6ddc0b1f {
+  width: 630rpx;
+  margin: 28rpx auto 0;
+}
+.item .content .header.data-v-6ddc0b1f {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  height: 80rpx;
+}
+.item .content .number.data-v-6ddc0b1f {
+  font-weight: bold;
+}
+.item .content .score.data-v-6ddc0b1f {
+  color: #BCC2CC;
+}
+.item .question.data-v-6ddc0b1f {
+  text-align: justify;
+  margin-bottom: 56rpx;
+}
+.item .options.data-v-6ddc0b1f {
+  width: 100%;
+  height: 88rpx;
+  border-radius: 44rpx;
+  background-color: #F6F5FA;
+  font-weight: bold;
+  text-align: center;
+  line-height: 88rpx;
+  margin-bottom: 30rpx;
+}
+.item .checked.data-v-6ddc0b1f {
+  background-color: #00D6C0 !important;
+  color: #FFFFFF;
+}
+

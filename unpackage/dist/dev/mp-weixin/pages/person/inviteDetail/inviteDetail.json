@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "邀请明细",
+  "usingComponents": {
+    "invite-item": "/components/common/InviteItem/InviteItem"
+  }
+}

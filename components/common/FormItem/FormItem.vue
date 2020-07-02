@@ -48,7 +48,19 @@
 							@change="bindDateChange"
 							v-if="item.mode == 'date'">
 							<view
-								:class="[{placeholder: !date}]"
+								:class="[{placeholder: !picker[item.name]}]"
+								class="pickerText">{{picker[item.name] || item.placeholder}}</view>
+						</picker>
+						<picker
+							:id="index"
+							mode="region"
+							:value="date"
+							:start="startDate"
+							:end="endDate"
+							@change="regionChange"
+							v-if="item.mode == 'region'">
+							<view
+								:class="[{placeholder: !picker[item.name]}]"
 								class="pickerText">{{picker[item.name] || item.placeholder}}</view>
 						</picker>
 					</view>
@@ -57,7 +69,7 @@
 			<button
 				form-type="submit"
 				class="button"
-				:class="[{disable: disable}, {loading: loading}]">
+				:class="[{disable: disable}, {isLoading: loading}]">
 				<image class="loading" v-if="loading" src="@/static/common/loading.png" mode=""></image>{{loading? '提交中' : text}}
 			</button>
 		</form>
@@ -87,6 +99,10 @@ export default {
 		img: {
 			type: Object,
 			default: () => { return {} }
+		},
+		disable: {
+			type: Boolean,
+			default: false
 		}
 	},
 	data () {
@@ -100,12 +116,14 @@ export default {
 				politics: '',
 				education: '',
 				start: '',
-				end: ''
+				end: '',
+				area: ''
 			}
 		}
 	},
 	methods: {
 		formSubmit ({detail:{value}}) {
+			if (this.loading || this.disable) return
 			value = Object.assign(value, this.picker, this.img)
 			console.log(value)
 			const len = this.formList.length
@@ -151,6 +169,12 @@ export default {
 			console.log(id)
 			const item = this.formList[id]
 			this.picker[item.name] = value
+		},
+		regionChange ({currentTarget: {id}, detail: {value}}) {
+			console.log(id, value)
+			const item = this.formList[id]
+			this.picker[item.name] = value.join('')
+			this.$emit('areaChange', value, id)
 		}
 	}
 }
@@ -217,7 +241,7 @@ export default {
 			}
 		}
 	}
-	.loading {
+	.isLoading {
 		opacity: 0.4;
 	}
 	.disable {

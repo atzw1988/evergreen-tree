@@ -92,7 +92,6 @@ export default {
 .signPage {
 	width: 100%;
 	height: 100vh;
-	background-color: #FFFFFF;
 	.content {
 		width: 690rpx;
 		height: 100vh;

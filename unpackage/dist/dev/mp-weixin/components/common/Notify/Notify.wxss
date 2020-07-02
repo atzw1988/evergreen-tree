@@ -1,0 +1,35 @@
+.notify.data-v-5fb2f19f {
+  width: 100%;
+  min-height: 64rpx;
+  line-height: 2.3;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #2d8cf0;
+  color: #FFFFFF;
+  font-weight: 28rpx;
+  opacity: 0;
+  -webkit-transform: translateZ(0) translateY(-100%);
+          transform: translateZ(0) translateY(-100%);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.notifyShow.data-v-5fb2f19f {
+  opacity: 1;
+  -webkit-transform: translateZ(0) translateY(0);
+          transform: translateZ(0) translateY(0);
+}
+.primary.data-v-5fb2f19f {
+  background-color: #2d8cf0;
+}
+.success.data-v-5fb2f19f {
+  background-color: #19be6b;
+}
+.warning.data-v-5fb2f19f {
+  background-color: #f90;
+}
+.error.data-v-5fb2f19f {
+  background-color: #ed3f14;
+}
+

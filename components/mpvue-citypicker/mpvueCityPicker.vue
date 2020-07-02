@@ -152,8 +152,7 @@
 <style>
 	.pickerMask {
 		position: fixed;
-		z-index: 1000;
-		top: 0;
+		z-index: 100;		top: 0;
 		right: 0;
 		left: 0;
 		bottom: 0;

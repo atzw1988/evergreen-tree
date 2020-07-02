@@ -43,6 +43,37 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* uni.css - 通用组件、模板样式库，可以当作一套ui库应用 */
 @font-face {
 	font-family: uniicons;
@@ -1544,7 +1575,7 @@ radio-group label, checkbox-group label{
 }
 /* 以下样式用于 hello uni-app 演示所需 */
 page {
-    background-color: #FAFAFA;
+    background-color: #FFFFFF;
     height: 100%;
     font-size: 28rpx;
     line-height: 1.8;

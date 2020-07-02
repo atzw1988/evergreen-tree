@@ -45,7 +45,7 @@
 	.list {
 		width: 96rpx;
 		height: 96rpx;
-		z-index: 1001;
+		z-index: 101;
 		.Active {
 			width: 96rpx;
 			height: 96rpx;
@@ -61,7 +61,6 @@
 		width: 554rpx;
 		margin-left: 48rpx;
 		margin-top: 47rpx;
-		z-index: 1000;
-	}
+		z-index: 100;	}
 }
 </style>

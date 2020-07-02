@@ -2,6 +2,7 @@
   width: 100%;
   height: 100vh;
   position: relative;
+  background-color: #FAFAFA;
 }
 .customerInfoPage .header.data-v-28d5d515 {
   width: 100%;
@@ -21,12 +22,12 @@
 .customerInfoPage .header image.data-v-28d5d515 {
   width: 750rpx;
   height: 324rpx;
-  z-index: 1000;
+  z-index: 100;
 }
 .customerInfoPage .header .userInfo.data-v-28d5d515 {
   width: 670rpx;
   height: 320rpx;
-  z-index: 1001;
+  z-index: 101;
   position: absolute;
   top: 280rpx;
   left: 40rpx;

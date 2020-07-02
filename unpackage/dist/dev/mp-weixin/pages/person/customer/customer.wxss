@@ -1,6 +1,7 @@
 .customerPage.data-v-12369656 {
   width: 100%;
   height: 100vh;
+  background-color: #FAFAFA;
 }
 .customerPage .itemList.data-v-12369656 {
   width: 690rpx;

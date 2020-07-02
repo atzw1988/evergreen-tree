@@ -80,7 +80,7 @@ export default {
 		},
 		// 跳转考试结果
 		toExamResults (score) {
-			this.$router.push({
+			this.$_router.push({
 				name: 'examResults',
 				data: score
 			})
@@ -95,6 +95,7 @@ export default {
 	height: 100vh;
 	font-size: 28rpx;
 	color: #333333;
+	background-color: #FAFAFA;
 	.header {
 		width: 100%;
 		height: 80rpx;

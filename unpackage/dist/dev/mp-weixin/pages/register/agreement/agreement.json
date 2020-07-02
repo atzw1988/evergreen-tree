@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "签订协议",
+  "usingComponents": {
+    "tree-steps": "/components/common/TreeSteps/TreeSteps"
+  }
+}

@@ -1,7 +1,6 @@
 .homePage.data-v-b80bdbc2 {
   width: 100%;
   height: 100vh;
-  background-color: #FFFFFF;
   color: #333333;
 }
 .homePage .banner.data-v-b80bdbc2 {

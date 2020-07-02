@@ -14,14 +14,15 @@ var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 5));
 
 
 
+
 var _index = _interopRequireDefault(__webpack_require__(/*! @/router/index.js */ 11));
 var _store = _interopRequireDefault(__webpack_require__(/*! ./store */ 21));
-var _base = _interopRequireDefault(__webpack_require__(/*! @/util/base.js */ 26));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var pageHead = function pageHead() {__webpack_require__.e(/*! require.ensure | components/page-head */ "components/page-head").then((function () {return resolve(__webpack_require__(/*! ./components/page-head.vue */ 107));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var pageFoot = function pageFoot() {__webpack_require__.e(/*! require.ensure | components/page-foot */ "components/page-foot").then((function () {return resolve(__webpack_require__(/*! ./components/page-foot.vue */ 112));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uLink = function uLink() {__webpack_require__.e(/*! require.ensure | components/uLink */ "components/uLink").then((function () {return resolve(__webpack_require__(/*! @/components/uLink.vue */ 119));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var TreeButton = function TreeButton() {__webpack_require__.e(/*! require.ensure | components/common/TreeButton/TreeButton */ "components/common/TreeButton/TreeButton").then((function () {return resolve(__webpack_require__(/*! @/components/common/TreeButton/TreeButton.vue */ 124));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+var _base = _interopRequireDefault(__webpack_require__(/*! @/util/base.js */ 26));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var pageHead = function pageHead() {__webpack_require__.e(/*! require.ensure | components/page-head */ "components/page-head").then((function () {return resolve(__webpack_require__(/*! ./components/page-head.vue */ 77));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var pageFoot = function pageFoot() {__webpack_require__.e(/*! require.ensure | components/page-foot */ "components/page-foot").then((function () {return resolve(__webpack_require__(/*! ./components/page-foot.vue */ 82));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uLink = function uLink() {__webpack_require__.e(/*! require.ensure | components/uLink */ "components/uLink").then((function () {return resolve(__webpack_require__(/*! @/components/uLink.vue */ 89));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var TreeButton = function TreeButton() {__webpack_require__.e(/*! require.ensure | components/common/TreeButton/TreeButton */ "components/common/TreeButton/TreeButton").then((function () {return resolve(__webpack_require__(/*! @/components/common/TreeButton/TreeButton.vue */ 94));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Notify = function Notify() {__webpack_require__.e(/*! require.ensure | components/common/Notify/Notify */ "components/common/Notify/Notify").then((function () {return resolve(__webpack_require__(/*! @/components/common/Notify/Notify.vue */ 362));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 
 _vue.default.config.productionTip = false;
 
 _vue.default.prototype.$store = _store.default;
-_vue.default.prototype.$router = _index.default;
+_vue.default.prototype.$_router = _index.default;
 _vue.default.prototype.$base = _base.default;
 _vue.default.prototype.$backgroundAudioData = {
   playing: false,
@@ -34,6 +35,7 @@ _vue.default.component('page-head', pageHead);
 _vue.default.component('page-foot', pageFoot);
 _vue.default.component('uLink', uLink);
 _vue.default.component('tree-button', TreeButton);
+_vue.default.component('Notify', Notify);
 
 _App.default.mpType = 'app';
 
@@ -140,6 +142,37 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+
+    console.log('微信小程序');
+    var updateManager = wx.getUpdateManager();
+    updateManager.onCheckForUpdate(function (res) {
+      // 请求完新版本信息的回调
+      console.log(res.hasUpdate);
+    });
+    updateManager.onUpdateReady(function () {
+      // wx.showModal({
+      //     title: '更新提示',
+      //     content: '新版本已经准备好，请下载并重启应用？',
+      //     showCancel: false,
+      //     success: function (res) {
+      //         if (res.confirm) {
+      //             // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
+      //             updateManager.applyUpdate()
+      //         }
+      //     }
+      // })
+      updateManager.applyUpdate();
+    });
+
+    updateManager.onUpdateFailed(function () {
+      // 新的版本下载失败
+      wx.showModal({
+        title: '更新提示',
+        content: '新版本下载失败',
+        showCancel: false });
+
+    });
 
   },
   onShow: function onShow() {

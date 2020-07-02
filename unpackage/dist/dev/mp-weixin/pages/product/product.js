@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var TabList = function TabList() {__webpack_require__.e(/*! require.ensure | components/common/TabList/TabList */ "components/common/TabList/TabList").then((function () {return resolve(__webpack_require__(/*! @/components/common/TabList/TabList */ 145));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var ProductDetail = function ProductDetail() {__webpack_require__.e(/*! require.ensure | components/common/ProductDetail/ProductDetail */ "components/common/ProductDetail/ProductDetail").then((function () {return resolve(__webpack_require__(/*! @/components/common/ProductDetail/ProductDetail.vue */ 138));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var TabList = function TabList() {__webpack_require__.e(/*! require.ensure | components/common/TabList/TabList */ "components/common/TabList/TabList").then((function () {return resolve(__webpack_require__(/*! @/components/common/TabList/TabList */ 108));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var ProductDetail = function ProductDetail() {__webpack_require__.e(/*! require.ensure | components/common/ProductDetail/ProductDetail */ "components/common/ProductDetail/ProductDetail").then((function () {return resolve(__webpack_require__(/*! @/components/common/ProductDetail/ProductDetail.vue */ 101));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
