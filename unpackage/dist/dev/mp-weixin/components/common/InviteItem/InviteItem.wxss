@@ -1,10 +1,10 @@
-.item.data-v-29c310bf {
+.item.data-v-cd82dbf4 {
   width: 690rpx;
   height: 274rpx;
   padding: 0 30rpx;
   border-bottom: 2rpx solid #F7F7F7;
 }
-.item .title.data-v-29c310bf {
+.item .title.data-v-cd82dbf4 {
   width: 100%;
   margin-bottom: 30rpx;
   display: -webkit-box;
@@ -17,19 +17,19 @@
   -webkit-align-items: center;
           align-items: center;
 }
-.item .title .name.data-v-29c310bf {
+.item .title .name.data-v-cd82dbf4 {
   font-size: 32rpx;
   font-weight: bold;
 }
-.item .title .status.data-v-29c310bf {
+.item .title .status.data-v-cd82dbf4 {
   color: #00D6C0;
   font-weight: bold;
 }
-.item .title .error.data-v-29c310bf {
+.item .title .error.data-v-cd82dbf4 {
   color: #333333;
   font-weight: normal;
 }
-.item .content.data-v-29c310bf {
+.item .content.data-v-cd82dbf4 {
   padding: 12rpx 20rpx;
   width: 650rpx;
   height: 138rpx;
@@ -37,7 +37,7 @@
   border-radius: 4rpx;
   font-size: 24rpx;
 }
-.item .content .list.data-v-29c310bf {
+.item .content .list.data-v-cd82dbf4 {
   margin-top: 2rpx;
   width: 100%;
   display: -webkit-box;
@@ -47,7 +47,7 @@
   -webkit-justify-content: space-between;
           justify-content: space-between;
 }
-.item .content .list .text.data-v-29c310bf {
+.item .content .list .text.data-v-cd82dbf4 {
   color: #BCC2CC;
 }
 

@@ -6,6 +6,7 @@ import pageFoot from './components/page-foot.vue'
 import uLink from '@/components/uLink.vue'
 import TreeButton from '@/components/common/TreeButton/TreeButton.vue'
 import Notify from '@/components/common/Notify/Notify.vue'
+import Spin from '@/components/common/Spin/Spin.vue'
 import router from '@/router/index.js'
 import store from './store'
 import base from '@/util/base.js'
@@ -27,6 +28,7 @@ Vue.component('page-foot', pageFoot)
 Vue.component('uLink', uLink)
 Vue.component('tree-button', TreeButton)
 Vue.component('Notify', Notify)
+Vue.component('Spin', Spin)
 
 App.mpType = 'app'
 

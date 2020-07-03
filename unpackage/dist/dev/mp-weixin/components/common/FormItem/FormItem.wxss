@@ -1,7 +1,7 @@
-.formPage.data-v-783ad042 {
+.formPage.data-v-2567d4a6 {
   width: 100%;
 }
-.formPage .formItem.data-v-783ad042 {
+.formPage .formItem.data-v-2567d4a6 {
   width: 90%;
   margin: 0 auto;
   display: -webkit-box;
@@ -15,17 +15,17 @@
           justify-content: space-between;
   border-bottom: 1rpx solid #F7F7F7;
 }
-.formPage .formItem .formLabel.data-v-783ad042 {
+.formPage .formItem .formLabel.data-v-2567d4a6 {
   padding: 24rpx 0;
 }
-.formPage .formItem .pickerText.data-v-783ad042 {
+.formPage .formItem .pickerText.data-v-2567d4a6 {
   padding: 0;
   text-align: right;
 }
-.formPage .formItem .placeholder.data-v-783ad042 {
+.formPage .formItem .placeholder.data-v-2567d4a6 {
   color: #777777;
 }
-.formPage .button.data-v-783ad042 {
+.formPage .button.data-v-2567d4a6 {
   width: 690rpx;
   margin: 60rpx auto 0;
   font-size: 36rpx;
@@ -44,14 +44,14 @@
           justify-content: center;
   margin-bottom: 40rpx;
 }
-.formPage .button .loading.data-v-783ad042 {
+.formPage .button .loading.data-v-2567d4a6 {
   width: 40rpx;
   height: 40rpx;
   margin-right: 20rpx;
-  -webkit-animation: loadingAni-data-v-783ad042 2s linear infinite;
-          animation: loadingAni-data-v-783ad042 2s linear infinite;
+  -webkit-animation: loadingAni-data-v-2567d4a6 2s linear infinite;
+          animation: loadingAni-data-v-2567d4a6 2s linear infinite;
 }
-@-webkit-keyframes loadingAni-data-v-783ad042 {
+@-webkit-keyframes loadingAni-data-v-2567d4a6 {
 0% {
     -webkit-transform: rotate(0deg);
 }
@@ -68,7 +68,7 @@
     -webkit-transform: rotate(360deg);
 }
 }
-@keyframes loadingAni-data-v-783ad042 {
+@keyframes loadingAni-data-v-2567d4a6 {
 0% {
     -webkit-transform: rotate(0deg);
 }
@@ -85,10 +85,10 @@
     -webkit-transform: rotate(360deg);
 }
 }
-.formPage .isLoading.data-v-783ad042 {
+.formPage .isLoading.data-v-2567d4a6 {
   opacity: 0.4;
 }
-.formPage .disable.data-v-783ad042 {
+.formPage .disable.data-v-2567d4a6 {
   background-color: #f3f3f3 !important;
 }
 

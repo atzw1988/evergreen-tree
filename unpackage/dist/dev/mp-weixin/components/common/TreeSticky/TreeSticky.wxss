@@ -1,0 +1,6 @@
+.tree-sticky.data-v-e0acfdb4 {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+}
+

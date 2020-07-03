@@ -43,7 +43,7 @@
 				</scroll-view>
 			</view>
 		</view>
-		<Notify id="notify"></Notify>
+		<Notify id="notify" :insetTop="true" background="#00D6C0"></Notify>
 	</view>
 </template>
 
@@ -115,6 +115,7 @@ export default {
 	},
 	methods: {
 		handleClick () {
+			console.log(1)
 			this.$base.sM('测试通知')
 		}
 	}

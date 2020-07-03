@@ -41,7 +41,7 @@ function hideLoading () {
 	// #ifdef MP-WEIXIN
 	ctx.$vm.handleShow(options)
 	// #endif
-	// #ifdef H5
+	// #ifdef H5, APP-VUE
 	ctx.handleShow(options)
 	// #endif
 }

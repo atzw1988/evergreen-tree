@@ -2,12 +2,16 @@
 	<view
 		class="notify"
 		:style="{
-			background: background,
 			top: top,
 			zIndex: zIndex
 		}"
 		:class="[type, {notifyShow: isShow}]">
-		<view v-if="safeAreaInsetTop" :style="{height: statusBarHeight + 'px'}"></view>
+		<view
+			v-if="insetTop"
+			:style="{
+				background: background,
+				height: statusBarHeight + 'px'
+			}"></view>
 		<text>{{message}}</text>
 	</view>
 </template>
@@ -25,7 +29,7 @@ export default {
 			type: Number,
 			default: 1001
 		},
-		safeAreaInsetTop: {
+		insetTop: {
 			type: Boolean,
 			default: false
 		},
@@ -49,6 +53,7 @@ export default {
 	},
 	methods: {
 		handleShow (options) {
+			console.log(options)
 			for (let key in options) {
 				this[key] = options[key]
 			}

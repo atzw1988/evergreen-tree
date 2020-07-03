@@ -92,6 +92,7 @@
     "page-foot": "/components/page-foot",
     "u-link": "/components/uLink",
     "tree-button": "/components/common/TreeButton/TreeButton",
-    "notify": "/components/common/Notify/Notify"
+    "notify": "/components/common/Notify/Notify",
+    "spin": "/components/common/Spin/Spin"
   }
 }

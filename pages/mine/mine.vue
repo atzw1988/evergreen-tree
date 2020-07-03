@@ -36,8 +36,6 @@
 <wxs src="@/util/wxs/filter.wxs" module="filter"></wxs>
 
 <script>
-import router from '@/router/index.js'
-
 export default {
 	data () {
 		return {
@@ -83,7 +81,7 @@ export default {
 		// 菜单跳转
 		handleMenu ({detail: {index}}) {
 			console.log(index)
-			router.push({
+			this.$_router.push({
 				name: this.menu[index].name
 			})
 		},

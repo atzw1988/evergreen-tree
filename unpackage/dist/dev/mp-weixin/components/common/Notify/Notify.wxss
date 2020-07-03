@@ -1,4 +1,4 @@
-.notify.data-v-5fb2f19f {
+.notify.data-v-8f28ac34 {
   width: 100%;
   min-height: 64rpx;
   line-height: 2.3;
@@ -15,21 +15,21 @@
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.notifyShow.data-v-5fb2f19f {
+.notifyShow.data-v-8f28ac34 {
   opacity: 1;
   -webkit-transform: translateZ(0) translateY(0);
           transform: translateZ(0) translateY(0);
 }
-.primary.data-v-5fb2f19f {
+.primary.data-v-8f28ac34 {
   background-color: #2d8cf0;
 }
-.success.data-v-5fb2f19f {
+.success.data-v-8f28ac34 {
   background-color: #19be6b;
 }
-.warning.data-v-5fb2f19f {
+.warning.data-v-8f28ac34 {
   background-color: #f90;
 }
-.error.data-v-5fb2f19f {
+.error.data-v-8f28ac34 {
   background-color: #ed3f14;
 }
 

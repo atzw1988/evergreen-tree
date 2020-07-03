@@ -1,4 +1,4 @@
-const { get, remove } = require('./storage.js')
+const { get, remove, set } = require('./storage.js')
 const { environment, config } = require('./config.js')
 const tips = require('./tips.js')
 const { dT } = require('./base.js')
@@ -11,6 +11,7 @@ const request = (url, data, method) => {
 	let header = {
 		'Content-Type': 'application/json'
 	}
+	set('token', 'bd63a8e107fc43228816c7801ab63ecb1593682418771')
 	const token = get('token')
 	if (token) header.token = token
 	return new Promise((resolve, reject) => {

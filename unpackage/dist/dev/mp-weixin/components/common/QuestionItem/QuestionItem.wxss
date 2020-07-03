@@ -1,4 +1,4 @@
-.item.data-v-6ddc0b1f {
+.item.data-v-74d0de34 {
   width: 100%;
   height: 760rpx;
   background-color: #FFFFFF;
@@ -6,11 +6,11 @@
   margin-top: 30rpx;
   color: #333333;
 }
-.item .content.data-v-6ddc0b1f {
+.item .content.data-v-74d0de34 {
   width: 630rpx;
   margin: 28rpx auto 0;
 }
-.item .content .header.data-v-6ddc0b1f {
+.item .content .header.data-v-74d0de34 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -22,17 +22,17 @@
           align-items: center;
   height: 80rpx;
 }
-.item .content .number.data-v-6ddc0b1f {
+.item .content .number.data-v-74d0de34 {
   font-weight: bold;
 }
-.item .content .score.data-v-6ddc0b1f {
+.item .content .score.data-v-74d0de34 {
   color: #BCC2CC;
 }
-.item .question.data-v-6ddc0b1f {
+.item .question.data-v-74d0de34 {
   text-align: justify;
   margin-bottom: 56rpx;
 }
-.item .options.data-v-6ddc0b1f {
+.item .options.data-v-74d0de34 {
   width: 100%;
   height: 88rpx;
   border-radius: 44rpx;
@@ -42,7 +42,7 @@
   line-height: 88rpx;
   margin-bottom: 30rpx;
 }
-.item .checked.data-v-6ddc0b1f {
+.item .checked.data-v-74d0de34 {
   background-color: #00D6C0 !important;
   color: #FFFFFF;
 }

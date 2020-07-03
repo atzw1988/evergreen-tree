@@ -1,21 +1,21 @@
-.certificate.data-v-10593363 {
+.certificate.data-v-21da2cfc {
   width: 100%;
   height: 100vh;
 }
-.certificate .steps.data-v-10593363 {
+.certificate .steps.data-v-21da2cfc {
   width: 650rpx;
   margin: 0 auto;
 }
-.certificate .content.data-v-10593363 {
+.certificate .content.data-v-21da2cfc {
   width: 690rpx;
   margin: 0 auto;
 }
-.certificate .content .tips.data-v-10593363 {
+.certificate .content .tips.data-v-21da2cfc {
   font-size: 24rpx;
   color: #F3AB42;
   margin-bottom: 32rpx;
 }
-.certificate .content .bankCard.data-v-10593363 {
+.certificate .content .bankCard.data-v-21da2cfc {
   width: 690rpx;
   height: 408rpx;
   margin: 52rpx 0 60rpx;
@@ -31,19 +31,19 @@
   -webkit-align-items: center;
           align-items: center;
 }
-.certificate .content .bankCard image.data-v-10593363 {
+.certificate .content .bankCard image.data-v-21da2cfc {
   height: 100%;
 }
-.certificate .content .bankCard .icon.data-v-10593363 {
+.certificate .content .bankCard .icon.data-v-21da2cfc {
   width: 200rpx;
 }
-.certificate .content .bankCard .icon .iconImg.data-v-10593363 {
+.certificate .content .bankCard .icon .iconImg.data-v-21da2cfc {
   display: block;
   width: 116rpx;
   height: 116rpx;
   margin: 0 auto;
 }
-.certificate .content .bankCard .icon .text.data-v-10593363 {
+.certificate .content .bankCard .icon .text.data-v-21da2cfc {
   font-weight: bold;
   text-align: center;
   margin: 30rpx auto 0;

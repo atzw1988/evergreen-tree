@@ -1,9 +1,9 @@
-.tabBar.data-v-2975b7b2 {
+.tabBar.data-v-0e9e32a4 {
   width: 100%;
   height: 80rpx;
   background-color: #FFFFFF;
 }
-.tabBar .tabBarContent.data-v-2975b7b2 {
+.tabBar .tabBarContent.data-v-0e9e32a4 {
   width: 100%;
   height: 80rpx;
   display: -webkit-box;
@@ -14,7 +14,7 @@
   -webkit-justify-content: space-around;
           justify-content: space-around;
 }
-.tabBar .tabBarContent .tabBarItem.data-v-2975b7b2 {
+.tabBar .tabBarContent .tabBarItem.data-v-0e9e32a4 {
   padding: 10rpx 0;
   font-size: 28rpx;
   color: #999999;
@@ -22,11 +22,11 @@
           flex-shrink: 1;
   position: relative;
 }
-.tabBar .tabBarContent .active.data-v-2975b7b2 {
+.tabBar .tabBarContent .active.data-v-0e9e32a4 {
   color: #333333 !important;
   font-weight: bold;
 }
-.tabBar .tabBarContent .active.data-v-2975b7b2::after {
+.tabBar .tabBarContent .active.data-v-0e9e32a4::after {
   content: '';
   width: 100%;
   height: 8rpx;

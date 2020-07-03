@@ -1,0 +1,74 @@
+.spin.data-v-5336c686 {
+  color: #00D6C0;
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+.spin-dot.data-v-5336c686 {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  background-color: #00D6C0;
+  width: 60rpx;
+  height: 60rpx;
+  -webkit-animation: ani-spin-bounce-data-v-5336c686 1s 0s ease-in-out infinite;
+          animation: ani-spin-bounce-data-v-5336c686 1s 0s ease-in-out infinite;
+}
+@-webkit-keyframes ani-spin-bounce-data-v-5336c686 {
+0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+}
+100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+}
+}
+@keyframes ani-spin-bounce-data-v-5336c686 {
+0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+}
+100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+}
+}
+.spin-large .spin-dot.data-v-5336c686 {
+  width: 96rpx;
+  height: 96rpx;
+}
+.spin-small .spin-dot.data-v-5336c686 {
+  width: 36rpx;
+  height: 36rpx;
+}
+.spin-fix.data-v-5336c686 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.spin-fix .spin-main.data-v-5336c686 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.spin-fix .spin-dot.data-v-5336c686 {
+  display: inline-block;
+}
+.spin-show-text .spin-dot .spin-text.data-v-5336c686 {
+  display: none;
+}
+.spin-show-text .spin-dot .spin-text.data-v-5336c686 {
+  display: block;
+  font-size: 28rpx;
+}
+

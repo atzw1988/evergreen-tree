@@ -20,13 +20,14 @@
 			<block v-for="(item, index) in list" :key="index">
 				<ProductDetail :item="item"></ProductDetail>
 			</block>
+			<Spin fix v-if="isShow"></Spin>
 		</view>
 		<Notify id="notify"></Notify>
 	</scroll-view>
 </template>
 
 <script>
-import ProductDetail from '../../components/common/ProductDetail/ProductDetail.vue'
+import ProductDetail from '@/components/common/ProductDetail/ProductDetail.vue'
 import { getStep } from '@/util/api.js'
 export default {
 	components: {
@@ -34,6 +35,28 @@ export default {
 	},
 	data () {
 		return {
+			tabList: [
+				{
+					title: '推荐',
+					value: 0
+				},
+				{
+					title: '意外险',
+					value: 1
+				},
+				{
+					title: '健康险',
+					value: 2
+				},
+				{
+					title: '财险',
+					value: 3
+				},
+				{
+					title: '人寿险',
+					value: 4
+				}
+			],
 			menuList: [
 				{
 					name: '产品',
@@ -62,52 +85,65 @@ export default {
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					icon: '../../../static/home/thumb.png'
+					// icon: '../../../static/home/thumb.png',
+					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
 					name: '长期返还型意外险',
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					icon: '../../../static/home/thumb.png'
+					// icon: '../../../static/home/thumb.png'
+					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
 					name: '长期返还型意外险',
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					icon: '../../../static/home/thumb.png'
+					// icon: '../../../static/home/thumb.png'
+					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
 					name: '长期返还型意外险',
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					icon: '../../../static/home/thumb.png'
+					// icon: '../../../static/home/thumb.png'
+					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				}
-			]
+			],
+			isShow: false
 		}
 	},
 	onShow () {
-		this.getStep()
+		// this.getStep()
+		this.isShow = true
+		setTimeout(() => {
+			this.isShow = false
+		}, 3000)
 	},
 	methods: {
 		// 跳转菜单
 		handleMenu (menu) {
 			console.log(menu)
-			this.$base.sM('测试通知')
-			// this.$_router.push({
-			// 	name: menu
-			// })
+			// this.$base.sM('测试通知')
+			this.$_router.push({
+				name: menu
+			})
 		},
 		// 获取步数
 		async getStep () {
+			this.isShow = true
 			const params = {
 				month: '2020-06',
 				userId: '2725'
 			}
-			let res = await getStep(params)
-			console.log(res)
+			let { code, data } = await getStep(params)
+			console.log(data)
+			if (code == 200) {
+				this.isShow = false
+			}
 		}
 	}
 }
@@ -181,6 +217,8 @@ export default {
 		.productList {
 			width: 690rpx;
 			margin: 50rpx auto 0;
+			position: relative;
+			min-height: 300rpx;
 			.listTitle {
 				width: 100%;
 				height: 50rpx;

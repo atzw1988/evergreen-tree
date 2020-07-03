@@ -1,9 +1,9 @@
-.registered.data-v-c7465382 {
+.registered.data-v-e75a6bf4 {
   width: 100%;
   height: 100vh;
   background-color: #F8F8F8;
 }
-.registered .content.data-v-c7465382 {
+.registered .content.data-v-e75a6bf4 {
   width: 690rpx;
   height: 848rpx;
   border-radius: 30rpx;
@@ -11,7 +11,7 @@
   background-color: #FFFFFF;
   position: relative;
 }
-.registered .content.data-v-c7465382::before {
+.registered .content.data-v-e75a6bf4::before {
   content: '';
   position: absolute;
   width: 100%;
@@ -19,17 +19,17 @@
   top: 530rpx;
   left: 0;
 }
-.registered .content .image.data-v-c7465382 {
+.registered .content .image.data-v-e75a6bf4 {
   width: 234rpx;
   height: 234rpx;
   display: block;
   margin: 56rpx auto 0;
 }
-.registered .content .inviter.data-v-c7465382 {
+.registered .content .inviter.data-v-e75a6bf4 {
   width: 100%;
   margin-top: 66rpx;
 }
-.registered .content .inviter .value.data-v-c7465382 {
+.registered .content .inviter .value.data-v-e75a6bf4 {
   font-size: 36rpx;
   font-weight: bold;
   display: -webkit-box;
@@ -39,7 +39,7 @@
   -webkit-justify-content: center;
           justify-content: center;
 }
-.registered .content .inviter .title.data-v-c7465382 {
+.registered .content .inviter .title.data-v-e75a6bf4 {
   width: 100%;
   margin-top: 20rpx;
   display: -webkit-box;
@@ -49,17 +49,17 @@
   -webkit-justify-content: center;
           justify-content: center;
 }
-.registered .content .inviter .title .list.data-v-c7465382 {
+.registered .content .inviter .title .list.data-v-e75a6bf4 {
   color: #BCC2CC;
 }
-.registered .content .inviter .name.data-v-c7465382 {
+.registered .content .inviter .name.data-v-e75a6bf4 {
   width: 140rpx;
 }
-.registered .content .inviter .phone.data-v-c7465382 {
+.registered .content .inviter .phone.data-v-e75a6bf4 {
   width: 200rpx;
 }
-.registered .content .left.data-v-c7465382,
-.registered .content .right.data-v-c7465382 {
+.registered .content .left.data-v-e75a6bf4,
+.registered .content .right.data-v-e75a6bf4 {
   position: absolute;
   width: 36rpx;
   height: 36rpx;
@@ -67,27 +67,27 @@
   border-radius: 50%;
   top: 514rpx;
 }
-.registered .content .left.data-v-c7465382 {
+.registered .content .left.data-v-e75a6bf4 {
   left: -18rpx;
 }
-.registered .content .right.data-v-c7465382 {
+.registered .content .right.data-v-e75a6bf4 {
   right: -18rpx;
 }
-.registered .content .myPhone.data-v-c7465382 {
+.registered .content .myPhone.data-v-e75a6bf4 {
   width: 100%;
   font-size: 48rpx;
   text-align: center;
   margin-top: 116rpx;
   font-weight: bold;
 }
-.registered .content .mytitle.data-v-c7465382 {
+.registered .content .mytitle.data-v-e75a6bf4 {
   width: 100%;
   font-size: 24rpx;
   color: #BCC2CC;
   text-align: center;
   margin-top: 16rpx;
 }
-.registered .content .tips.data-v-c7465382 {
+.registered .content .tips.data-v-e75a6bf4 {
   width: 100%;
   font-size: 24rpx;
   color: #F3AB42;

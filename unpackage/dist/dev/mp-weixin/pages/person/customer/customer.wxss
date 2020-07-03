@@ -1,9 +1,9 @@
-.customerPage.data-v-12369656 {
+.customerPage.data-v-75a057ae {
   width: 100%;
   height: 100vh;
   background-color: #FAFAFA;
 }
-.customerPage .itemList.data-v-12369656 {
+.customerPage .itemList.data-v-75a057ae {
   width: 690rpx;
   height: calc(100vh - 80rpx);
   margin: 0 auto;

@@ -1,4 +1,4 @@
-.item.data-v-760d83c2 {
+.item.data-v-1cb4c3e6 {
   width: 100%;
   height: 170rpx;
   background-color: #FFFFFF;
@@ -13,21 +13,21 @@
   -webkit-align-items: center;
           align-items: center;
 }
-.item .itemImg.data-v-760d83c2 {
+.item .itemImg.data-v-1cb4c3e6 {
   width: 90rpx;
   height: 90rpx;
   margin: 0 30rpx;
 }
-.item .detail.data-v-760d83c2 {
+.item .detail.data-v-1cb4c3e6 {
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
 }
-.item .detail .name.data-v-760d83c2 {
+.item .detail .name.data-v-1cb4c3e6 {
   font-size: 32rpx;
   font-weight: bold;
 }
-.item .detail .info.data-v-760d83c2 {
+.item .detail .info.data-v-1cb4c3e6 {
   width: 440rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -36,9 +36,9 @@
   -webkit-justify-content: space-between;
           justify-content: space-between;
 }
-.item .detail .info .order .icon.data-v-760d83c2,
-.item .detail .info .now .icon.data-v-760d83c2,
-.item .detail .info .money .icon.data-v-760d83c2 {
+.item .detail .info .order .icon.data-v-1cb4c3e6,
+.item .detail .info .now .icon.data-v-1cb4c3e6,
+.item .detail .info .money .icon.data-v-1cb4c3e6 {
   width: 24rpx;
   height: 24rpx;
   margin: 0 20rpx 0 0 !important;

@@ -346,9 +346,9 @@ function upx2px(number, newDeviceWidth) {
   result = Math.floor(result + EPS);
   if (result === 0) {
     if (deviceDPR === 1 || !isIOS) {
-      return 1;
+      result = 1;
     } else {
-      return 0.5;
+      result = 0.5;
     }
   }
   return number < 0 ? -result : result;
@@ -421,7 +421,10 @@ var protocols = {
 
 
 var todos = [
-'vibrate'];
+'vibrate',
+'preloadPage',
+'unPreloadPage',
+'loadSubPackage'];
 
 var canIUses = [];
 
@@ -1889,6 +1892,91 @@ module.exports = {
 
 /***/ }),
 
+/***/ 154:
+/*!****************************************************!*\
+  !*** E:/zwd/evergreen-tree/util/data/questions.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = exports.questions = void 0; // 考试题目
+var questions = [
+{
+  qid: 1,
+  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
+  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
+  right: 1,
+  score: 10 },
+
+{
+  qid: 2,
+  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
+  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
+  right: 1,
+  score: 10 },
+
+{
+  qid: 3,
+  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
+  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
+  right: 1,
+  score: 10 },
+
+{
+  qid: 4,
+  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
+  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
+  right: 1,
+  score: 10 },
+
+{
+  qid: 5,
+  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
+  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
+  right: 1,
+  score: 10 },
+
+{
+  qid: 6,
+  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
+  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
+  right: 1,
+  score: 10 }];exports.questions = questions;var _default =
+
+
+
+{
+  questions: questions };exports.default = _default;
+
+/***/ }),
+
+/***/ 155:
+/*!********************************************!*\
+  !*** E:/zwd/evergreen-tree/util/jutils.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// 答题判断
+function checkExam(arr, callback) {
+  var res = [];
+  var score = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == undefined) {
+      res.push(i + 1);
+    } else {
+      score += arr[i];
+    }
+  }
+  callback(res, score, res.length > 0);
+}
+
+module.exports = {
+  checkExam: checkExam };
+
+/***/ }),
+
 /***/ 16:
 /*!********************************************************!*\
   !*** E:/zwd/evergreen-tree/util/router/routeParser.js ***!
@@ -1997,91 +2085,6 @@ function relaunch() {var routeObj = arguments.length > 0 && arguments[0] !== und
 
 module.exports = relaunch;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 185:
-/*!****************************************************!*\
-  !*** E:/zwd/evergreen-tree/util/data/questions.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = exports.questions = void 0; // 考试题目
-var questions = [
-{
-  qid: 1,
-  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
-  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
-  right: 1,
-  score: 10 },
-
-{
-  qid: 2,
-  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
-  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
-  right: 1,
-  score: 10 },
-
-{
-  qid: 3,
-  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
-  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
-  right: 1,
-  score: 10 },
-
-{
-  qid: 4,
-  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
-  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
-  right: 1,
-  score: 10 },
-
-{
-  qid: 5,
-  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
-  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
-  right: 1,
-  score: 10 },
-
-{
-  qid: 6,
-  question: '依照《中华人民共和国民事诉讼法》的有关规定，因保险合同纠纷提起的诉讼，其管辖法院通常是被告所在地或',
-  options: ['投保人所在地', '被保人所在地', '保险标的人民法院所在地', '保险公司所在地'],
-  right: 1,
-  score: 10 }];exports.questions = questions;var _default =
-
-
-
-{
-  questions: questions };exports.default = _default;
-
-/***/ }),
-
-/***/ 186:
-/*!********************************************!*\
-  !*** E:/zwd/evergreen-tree/util/jutils.js ***!
-  \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// 答题判断
-function checkExam(arr, callback) {
-  var res = [];
-  var score = 0;
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i] == undefined) {
-      res.push(i + 1);
-    } else {
-      score += arr[i];
-    }
-  }
-  callback(res, score, res.length > 0);
-}
-
-module.exports = {
-  checkExam: checkExam };
 
 /***/ }),
 
@@ -2750,12 +2753,10 @@ if (true) {
   };
 
   formatComponentName = function (vm, includeFile) {
-    {
-      if(vm.$scope && vm.$scope.is){
-        return vm.$scope.is
-      }
-    }
     if (vm.$root === vm) {
+      if (vm.$options && vm.$options.__file) { // fixed by xxxxxx
+        return ('') + vm.$options.__file
+      }
       return '<Root>'
     }
     var options = typeof vm === 'function' && vm.cid != null
@@ -2790,7 +2791,7 @@ if (true) {
     if (vm._isVue && vm.$parent) {
       var tree = [];
       var currentRecursiveSequence = 0;
-      while (vm) {
+      while (vm && vm.$options.name !== 'PageBody') {
         if (tree.length > 0) {
           var last = tree[tree.length - 1];
           if (last.constructor === vm.constructor) {
@@ -2802,7 +2803,7 @@ if (true) {
             currentRecursiveSequence = 0;
           }
         }
-        tree.push(vm);
+        !vm.$options.isReserved && tree.push(vm);
         vm = vm.$parent;
       }
       return '\n\nfound in\n\n' + tree
@@ -7922,9 +7923,10 @@ function getTarget(obj, path) {
   return getTarget(obj[key], parts.slice(1).join('.'))
 }
 
-function internalMixin(Vue) {
+function internalMixin(Vue ) {
 
-  Vue.config.errorHandler = function(err) {
+  Vue.config.errorHandler = function(err, vm, info) {
+    Vue.util.warn(("Error in " + info + ": \"" + (err.toString()) + "\""), vm);
     console.error(err);
     /* eslint-disable no-undef */
     var app = getApp();
@@ -10194,14 +10196,14 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 357:
+/***/ 33:
 /*!*****************************************!*\
   !*** E:/zwd/evergreen-tree/util/api.js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _require = __webpack_require__(/*! ./requset.js */ 358),request = _require.request;
+var _require = __webpack_require__(/*! ./requset.js */ 34),request = _require.request;
 module.exports = {
   login: function login(data) {
     return request('/park/sys/login/wechatLogin', data, 'POST');
@@ -10212,16 +10214,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ 358:
+/***/ 34:
 /*!*********************************************!*\
   !*** E:/zwd/evergreen-tree/util/requset.js ***!
   \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(uni) {var _require = __webpack_require__(/*! ./storage.js */ 359),get = _require.get,remove = _require.remove;var _require2 =
-__webpack_require__(/*! ./config.js */ 360),environment = _require2.environment,config = _require2.config;
-var tips = __webpack_require__(/*! ./tips.js */ 361);var _require3 =
+/* WEBPACK VAR INJECTION */(function(uni) {var _require = __webpack_require__(/*! ./storage.js */ 35),get = _require.get,remove = _require.remove,set = _require.set;var _require2 =
+__webpack_require__(/*! ./config.js */ 36),environment = _require2.environment,config = _require2.config;
+var tips = __webpack_require__(/*! ./tips.js */ 37);var _require3 =
 __webpack_require__(/*! ./base.js */ 26),dT = _require3.dT;
 var router = __webpack_require__(/*! ./router/index.js */ 12);
 var API_BASE_URL = environment == 'develop' ? config.qaHost : config.proHost;
@@ -10232,6 +10234,7 @@ var request = function request(url, data, method) {
   var header = {
     'Content-Type': 'application/json' };
 
+  set('token', 'bd63a8e107fc43228816c7801ab63ecb1593682418771');
   var token = get('token');
   if (token) header.token = token;
   return new Promise(function (resolve, reject) {
@@ -10290,7 +10293,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 359:
+/***/ 35:
 /*!*********************************************!*\
   !*** E:/zwd/evergreen-tree/util/storage.js ***!
   \*********************************************/
@@ -10347,15 +10350,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ 360:
+/***/ 36:
 /*!********************************************!*\
   !*** E:/zwd/evergreen-tree/util/config.js ***!
   \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// const environment = 'develop'
-var environment = 'test';
+var environment = 'develop';
+// const environment = 'test'
 // const environment = 'production'
 
 var config = {
@@ -10370,7 +10373,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 361:
+/***/ 37:
 /*!******************************************!*\
   !*** E:/zwd/evergreen-tree/util/tips.js ***!
   \******************************************/

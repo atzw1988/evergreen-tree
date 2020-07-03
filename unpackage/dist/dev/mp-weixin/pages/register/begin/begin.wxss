@@ -1,14 +1,14 @@
-.beginPage.data-v-6d62a912 {
+.beginPage.data-v-7e77a2d0 {
   width: 100%;
   height: 100vh;
   position: relative;
 }
-.beginPage .bgImg.data-v-6d62a912 {
+.beginPage .bgImg.data-v-7e77a2d0 {
   width: 100%;
   height: 100%;
   z-index: 100;
 }
-.beginPage .begin.data-v-6d62a912 {
+.beginPage .begin.data-v-7e77a2d0 {
   width: 100%;
   height: 100rpx;
   left: 0;

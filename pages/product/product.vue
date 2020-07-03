@@ -54,7 +54,8 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../../static/home/thumb.png'
+					// icon: '../../../static/home/thumb.png',
+					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
 					id: 1,
@@ -63,7 +64,8 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../../static/home/thumb.png'
+					// icon: '../../../static/home/thumb.png'
+					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
 					id: 2,
@@ -72,7 +74,8 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../../static/home/thumb.png'
+					// icon: '../../../static/home/thumb.png'
+					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
 					id: 3,
@@ -81,7 +84,8 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../../static/home/thumb.png'
+					// icon: '../../../static/home/thumb.png'
+					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
 					id: 4,
@@ -90,7 +94,8 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../../static/home/thumb.png'
+					// icon: '../../../static/home/thumb.png'
+					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
 					id: 0,
@@ -99,7 +104,8 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../../static/home/thumb.png'
+					// icon: '../../../static/home/thumb.png'
+					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
 					id: 1,
@@ -108,7 +114,8 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../../static/home/thumb.png'
+					// icon: '../../../static/home/thumb.png'
+					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
 					id: 1,
@@ -117,7 +124,8 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../../static/home/thumb.png'
+					// icon: '../../../static/home/thumb.png'
+					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
 					id: 1,
@@ -126,7 +134,8 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../../static/home/thumb.png'
+					// icon: '../../../static/home/thumb.png'
+					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				}
 			]
 		}
