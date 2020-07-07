@@ -1,0 +1,1 @@
+<view class="proDemo data-v-644fb1c2"><form-product vue-id="25a58472-1" formList="{{formList}}" data-event-opts="{{[['^addInsured',[['addInsured']]],['^pickerChange',[['pickerChange']]]]}}" bind:addInsured="__e" bind:pickerChange="__e" class="data-v-644fb1c2" bind:__l="__l" vue-slots="{{['default']}}"><view class="test data-v-644fb1c2">测试</view></form-product></view>

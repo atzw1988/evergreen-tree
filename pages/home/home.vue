@@ -118,6 +118,8 @@ export default {
 	},
 	onShow () {
 		// this.getStep()
+		const res = uni.getSystemInfoSync()
+		console.log(res)
 		this.isShow = true
 		setTimeout(() => {
 			this.isShow = false

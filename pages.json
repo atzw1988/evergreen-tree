@@ -1,12 +1,12 @@
 {
 	"pages": [
 		// pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		// {
-		// 	"path": "pages/register/begin/begin",
-		// 	"style": {
-		// 		"navigationBarTitleText": "申请经纪人"
-		// 	}
-		// },
+		{
+			"path": "pages/products/proDemo/proDemo",
+			"style": {
+				"navigationBarTitleText": "产品模型"
+			}
+		},
 		{
 			"path":"pages/home/home",
 			"style": {
@@ -170,7 +170,8 @@
 		"color": "#333333",
 		"borderStyle": "black",
 		"backgroundColor": "#FFFFFF",
-		"list": [{
+		"list": [
+			{
 				"pagePath": "pages/home/home",
 				"iconPath": "static/component.png",
 				"selectedIconPath": "static/home/homeActive.png",
@@ -181,12 +182,14 @@
 				"iconPath": "static/home/product.png",
 				"selectedIconPath": "static/apiHL.png",
 				"text": "产品"
-			}, {
+			},
+			{
 				"pagePath": "pages/team/team",
 				"iconPath": "static/home/team.png",
 				"selectedIconPath": "static/extuiHL.png",
 				"text": "团队"
-			}, {
+			},
+			{
 				"pagePath": "pages/mine/mine",
 				"iconPath": "static/home/mine.png",
 				"selectedIconPath": "static/templateHL.png",

@@ -760,7 +760,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -1892,7 +1892,47 @@ module.exports = {
 
 /***/ }),
 
-/***/ 154:
+/***/ 16:
+/*!********************************************************!*\
+  !*** E:/zwd/evergreen-tree/util/router/routeParser.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var _require = __webpack_require__(/*! ./store.js */ 14),routeMap = _require.routeMap;
+
+/**
+                                                                    * 路由名称转路径
+                                                                    * @param {string} name 路由名
+                                                                    */
+function name2path(name) {
+  return name.replace(/\./g, '/').replace(/\B([A-Z])/g, '_$1').toLowerCase();
+}
+
+/**
+   * 路由解析
+   * @param {string} name 路由名
+   */
+function parser(name) {
+  if (!name) {
+    throw new Error('路由名字不能为空');
+  }
+  var route = routeMap[name];
+  if (!route) {
+    var path = "/pages/".concat(name2path(name), "/").concat(name2path(name));
+    route = routeMap[path] || {
+      type: 'page',
+      path: path };
+
+  }
+  return route;
+}
+
+module.exports = parser;
+
+/***/ }),
+
+/***/ 162:
 /*!****************************************************!*\
   !*** E:/zwd/evergreen-tree/util/data/questions.js ***!
   \****************************************************/
@@ -1951,7 +1991,7 @@ var questions = [
 
 /***/ }),
 
-/***/ 155:
+/***/ 163:
 /*!********************************************!*\
   !*** E:/zwd/evergreen-tree/util/jutils.js ***!
   \********************************************/
@@ -1974,46 +2014,6 @@ function checkExam(arr, callback) {
 
 module.exports = {
   checkExam: checkExam };
-
-/***/ }),
-
-/***/ 16:
-/*!********************************************************!*\
-  !*** E:/zwd/evergreen-tree/util/router/routeParser.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _require = __webpack_require__(/*! ./store.js */ 14),routeMap = _require.routeMap;
-
-/**
-                                                                    * 路由名称转路径
-                                                                    * @param {string} name 路由名
-                                                                    */
-function name2path(name) {
-  return name.replace(/\./g, '/').replace(/\B([A-Z])/g, '_$1').toLowerCase();
-}
-
-/**
-   * 路由解析
-   * @param {string} name 路由名
-   */
-function parser(name) {
-  if (!name) {
-    throw new Error('路由名字不能为空');
-  }
-  var route = routeMap[name];
-  if (!route) {
-    var path = "/pages/".concat(name2path(name), "/").concat(name2path(name));
-    route = routeMap[path] || {
-      type: 'page',
-      path: path };
-
-  }
-  return route;
-}
-
-module.exports = parser;
 
 /***/ }),
 
@@ -7649,7 +7649,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7670,14 +7670,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7753,7 +7753,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -10196,14 +10196,167 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 33:
+/***/ 4:
+/*!****************************************!*\
+  !*** E:/zwd/evergreen-tree/pages.json ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 400:
+/*!***********************************************************!*\
+  !*** E:/zwd/evergreen-tree/components/uni-icons/icons.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  "pulldown": "\uE588",
+  "refreshempty": "\uE461",
+  "back": "\uE471",
+  "forward": "\uE470",
+  "more": "\uE507",
+  "more-filled": "\uE537",
+  "scan": "\uE612",
+  "qq": "\uE264",
+  "weibo": "\uE260",
+  "weixin": "\uE261",
+  "pengyouquan": "\uE262",
+  "loop": "\uE565",
+  "refresh": "\uE407",
+  "refresh-filled": "\uE437",
+  "arrowthindown": "\uE585",
+  "arrowthinleft": "\uE586",
+  "arrowthinright": "\uE587",
+  "arrowthinup": "\uE584",
+  "undo-filled": "\uE7D6",
+  "undo": "\uE406",
+  "redo": "\uE405",
+  "redo-filled": "\uE7D9",
+  "bars": "\uE563",
+  "chatboxes": "\uE203",
+  "camera": "\uE301",
+  "chatboxes-filled": "\uE233",
+  "camera-filled": "\uE7EF",
+  "cart-filled": "\uE7F4",
+  "cart": "\uE7F5",
+  "checkbox-filled": "\uE442",
+  "checkbox": "\uE7FA",
+  "arrowleft": "\uE582",
+  "arrowdown": "\uE581",
+  "arrowright": "\uE583",
+  "smallcircle-filled": "\uE801",
+  "arrowup": "\uE580",
+  "circle": "\uE411",
+  "eye-filled": "\uE568",
+  "eye-slash-filled": "\uE822",
+  "eye-slash": "\uE823",
+  "eye": "\uE824",
+  "flag-filled": "\uE825",
+  "flag": "\uE508",
+  "gear-filled": "\uE532",
+  "reload": "\uE462",
+  "gear": "\uE502",
+  "hand-thumbsdown-filled": "\uE83B",
+  "hand-thumbsdown": "\uE83C",
+  "hand-thumbsup-filled": "\uE83D",
+  "heart-filled": "\uE83E",
+  "hand-thumbsup": "\uE83F",
+  "heart": "\uE840",
+  "home": "\uE500",
+  "info": "\uE504",
+  "home-filled": "\uE530",
+  "info-filled": "\uE534",
+  "circle-filled": "\uE441",
+  "chat-filled": "\uE847",
+  "chat": "\uE263",
+  "mail-open-filled": "\uE84D",
+  "email-filled": "\uE231",
+  "mail-open": "\uE84E",
+  "email": "\uE201",
+  "checkmarkempty": "\uE472",
+  "list": "\uE562",
+  "locked-filled": "\uE856",
+  "locked": "\uE506",
+  "map-filled": "\uE85C",
+  "map-pin": "\uE85E",
+  "map-pin-ellipse": "\uE864",
+  "map": "\uE364",
+  "minus-filled": "\uE440",
+  "mic-filled": "\uE332",
+  "minus": "\uE410",
+  "micoff": "\uE360",
+  "mic": "\uE302",
+  "clear": "\uE434",
+  "smallcircle": "\uE868",
+  "close": "\uE404",
+  "closeempty": "\uE460",
+  "paperclip": "\uE567",
+  "paperplane": "\uE503",
+  "paperplane-filled": "\uE86E",
+  "person-filled": "\uE131",
+  "contact-filled": "\uE130",
+  "person": "\uE101",
+  "contact": "\uE100",
+  "images-filled": "\uE87A",
+  "phone": "\uE200",
+  "images": "\uE87B",
+  "image": "\uE363",
+  "image-filled": "\uE877",
+  "location-filled": "\uE333",
+  "location": "\uE303",
+  "plus-filled": "\uE439",
+  "plus": "\uE409",
+  "plusempty": "\uE468",
+  "help-filled": "\uE535",
+  "help": "\uE505",
+  "navigate-filled": "\uE884",
+  "navigate": "\uE501",
+  "mic-slash-filled": "\uE892",
+  "search": "\uE466",
+  "settings": "\uE560",
+  "sound": "\uE590",
+  "sound-filled": "\uE8A1",
+  "spinner-cycle": "\uE465",
+  "download-filled": "\uE8A4",
+  "personadd-filled": "\uE132",
+  "videocam-filled": "\uE8AF",
+  "personadd": "\uE102",
+  "upload": "\uE402",
+  "upload-filled": "\uE8B1",
+  "starhalf": "\uE463",
+  "star-filled": "\uE438",
+  "star": "\uE408",
+  "trash": "\uE401",
+  "phone-filled": "\uE230",
+  "compose": "\uE400",
+  "videocam": "\uE300",
+  "trash-filled": "\uE8DC",
+  "download": "\uE403",
+  "chatbubble-filled": "\uE232",
+  "chatbubble": "\uE202",
+  "cloud-download": "\uE8E4",
+  "cloud-upload-filled": "\uE8E5",
+  "cloud-upload": "\uE8E6",
+  "cloud-download-filled": "\uE8E9",
+  "headphones": "\uE8BF",
+  "shop": "\uE609" };exports.default = _default;
+
+/***/ }),
+
+/***/ 41:
 /*!*****************************************!*\
   !*** E:/zwd/evergreen-tree/util/api.js ***!
   \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-var _require = __webpack_require__(/*! ./requset.js */ 34),request = _require.request;
+var _require = __webpack_require__(/*! ./requset.js */ 42),request = _require.request;
 module.exports = {
   login: function login(data) {
     return request('/park/sys/login/wechatLogin', data, 'POST');
@@ -10214,16 +10367,16 @@ module.exports = {
 
 /***/ }),
 
-/***/ 34:
+/***/ 42:
 /*!*********************************************!*\
   !*** E:/zwd/evergreen-tree/util/requset.js ***!
   \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(uni) {var _require = __webpack_require__(/*! ./storage.js */ 35),get = _require.get,remove = _require.remove,set = _require.set;var _require2 =
-__webpack_require__(/*! ./config.js */ 36),environment = _require2.environment,config = _require2.config;
-var tips = __webpack_require__(/*! ./tips.js */ 37);var _require3 =
+/* WEBPACK VAR INJECTION */(function(uni) {var _require = __webpack_require__(/*! ./storage.js */ 43),get = _require.get,remove = _require.remove,set = _require.set;var _require2 =
+__webpack_require__(/*! ./config.js */ 44),environment = _require2.environment,config = _require2.config;
+var tips = __webpack_require__(/*! ./tips.js */ 45);var _require3 =
 __webpack_require__(/*! ./base.js */ 26),dT = _require3.dT;
 var router = __webpack_require__(/*! ./router/index.js */ 12);
 var API_BASE_URL = environment == 'develop' ? config.qaHost : config.proHost;
@@ -10293,7 +10446,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 35:
+/***/ 43:
 /*!*********************************************!*\
   !*** E:/zwd/evergreen-tree/util/storage.js ***!
   \*********************************************/
@@ -10350,7 +10503,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 36:
+/***/ 44:
 /*!********************************************!*\
   !*** E:/zwd/evergreen-tree/util/config.js ***!
   \********************************************/
@@ -10373,7 +10526,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 37:
+/***/ 45:
 /*!******************************************!*\
   !*** E:/zwd/evergreen-tree/util/tips.js ***!
   \******************************************/
@@ -10491,17 +10644,6 @@ Tips = /*#__PURE__*/function () {
                             */exports.default = Tips;
 Tips.isLoading = false;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 4:
-/*!****************************************!*\
-  !*** E:/zwd/evergreen-tree/pages.json ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
 
 /***/ })
 

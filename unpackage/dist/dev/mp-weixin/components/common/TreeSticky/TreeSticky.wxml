@@ -1,1 +1,0 @@
-<view class="tree-sticky data-v-e0acfdb4" style="{{'top:'+(offsetTop+'rpx')+';'+('z-index:'+(zIndex)+';')}}"><slot></slot></view>

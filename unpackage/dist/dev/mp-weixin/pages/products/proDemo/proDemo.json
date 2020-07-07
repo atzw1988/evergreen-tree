@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "产品模型",
+  "usingComponents": {
+    "form-product": "/components/common/FormProduct/FormProduct"
+  }
+}

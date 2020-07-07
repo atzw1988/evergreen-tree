@@ -62,6 +62,14 @@
         },
         onShow: function() {
             console.log('App Show')
+			try{
+				const res = uni.getSystemInfoSync()
+				console.log(res)
+				this.globalData.safeAreaInsets = res.safeAreaInsets
+				this.globalData.statusBarHeight = res.statusBarHeight
+			}catch(e){
+				//TODO handle the exception
+			}
         },
         onHide: function() {
             console.log('App Hide')

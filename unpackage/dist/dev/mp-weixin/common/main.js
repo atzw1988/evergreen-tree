@@ -18,7 +18,7 @@ var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 5));
 
 var _index = _interopRequireDefault(__webpack_require__(/*! @/router/index.js */ 11));
 var _store = _interopRequireDefault(__webpack_require__(/*! ./store */ 21));
-var _base = _interopRequireDefault(__webpack_require__(/*! @/util/base.js */ 26));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var pageHead = function pageHead() {__webpack_require__.e(/*! require.ensure | components/page-head */ "components/page-head").then((function () {return resolve(__webpack_require__(/*! ./components/page-head.vue */ 208));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var pageFoot = function pageFoot() {__webpack_require__.e(/*! require.ensure | components/page-foot */ "components/page-foot").then((function () {return resolve(__webpack_require__(/*! ./components/page-foot.vue */ 213));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uLink = function uLink() {__webpack_require__.e(/*! require.ensure | components/uLink */ "components/uLink").then((function () {return resolve(__webpack_require__(/*! @/components/uLink.vue */ 220));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var TreeButton = function TreeButton() {__webpack_require__.e(/*! require.ensure | components/common/TreeButton/TreeButton */ "components/common/TreeButton/TreeButton").then((function () {return resolve(__webpack_require__(/*! @/components/common/TreeButton/TreeButton.vue */ 225));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Notify = function Notify() {__webpack_require__.e(/*! require.ensure | components/common/Notify/Notify */ "components/common/Notify/Notify").then((function () {return resolve(__webpack_require__(/*! @/components/common/Notify/Notify.vue */ 232));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Spin = function Spin() {__webpack_require__.e(/*! require.ensure | components/common/Spin/Spin */ "components/common/Spin/Spin").then((function () {return resolve(__webpack_require__(/*! @/components/common/Spin/Spin.vue */ 239));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+var _base = _interopRequireDefault(__webpack_require__(/*! @/util/base.js */ 26));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var pageHead = function pageHead() {__webpack_require__.e(/*! require.ensure | components/page-head */ "components/page-head").then((function () {return resolve(__webpack_require__(/*! ./components/page-head.vue */ 216));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var pageFoot = function pageFoot() {__webpack_require__.e(/*! require.ensure | components/page-foot */ "components/page-foot").then((function () {return resolve(__webpack_require__(/*! ./components/page-foot.vue */ 221));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var uLink = function uLink() {__webpack_require__.e(/*! require.ensure | components/uLink */ "components/uLink").then((function () {return resolve(__webpack_require__(/*! @/components/uLink.vue */ 228));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var TreeButton = function TreeButton() {__webpack_require__.e(/*! require.ensure | components/common/TreeButton/TreeButton */ "components/common/TreeButton/TreeButton").then((function () {return resolve(__webpack_require__(/*! @/components/common/TreeButton/TreeButton.vue */ 233));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Notify = function Notify() {__webpack_require__.e(/*! require.ensure | components/common/Notify/Notify */ "components/common/Notify/Notify").then((function () {return resolve(__webpack_require__(/*! @/components/common/Notify/Notify.vue */ 240));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var Spin = function Spin() {__webpack_require__.e(/*! require.ensure | components/common/Spin/Spin */ "components/common/Spin/Spin").then((function () {return resolve(__webpack_require__(/*! @/components/common/Spin/Spin.vue */ 247));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 
 _vue.default.config.productionTip = false;
 
@@ -115,7 +115,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
 {
   onLaunch: function onLaunch() {
     console.log('App Launch');
@@ -179,12 +179,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   },
   onShow: function onShow() {
     console.log('App Show');
+    try {
+      var res = uni.getSystemInfoSync();
+      console.log(res);
+      this.globalData.safeAreaInsets = res.safeAreaInsets;
+      this.globalData.statusBarHeight = res.statusBarHeight;
+    } catch (e) {
+      //TODO handle the exception
+    }
   },
   onHide: function onHide() {
     console.log('App Hide');
   },
   globalData: {
     test: '' } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 8 */
