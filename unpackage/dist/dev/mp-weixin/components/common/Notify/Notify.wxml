@@ -1,1 +1,0 @@
-<view class="{{['notify data-v-8f28ac34',type,[(isShow)?'notifyShow':'']]}}" style="{{'top:'+(top)+';'+('z-index:'+(zIndex)+';')}}"><block wx:if="{{insetTop}}"><view style="{{'background:'+(background)+';'+('height:'+(statusBarHeight+'px')+';')}}" class="data-v-8f28ac34"></view></block><text class="data-v-8f28ac34">{{message}}</text></view>

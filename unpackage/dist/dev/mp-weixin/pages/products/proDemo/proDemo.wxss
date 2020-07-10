@@ -1,9 +1,0 @@
-.proDemo.data-v-644fb1c2 {
-  width: 100%;
-  height: 100vh;
-  background-color: #FAFAFA;
-}
-.proDemo .test.data-v-644fb1c2 {
-  height: 500rpx;
-}
-

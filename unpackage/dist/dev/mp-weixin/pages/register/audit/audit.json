@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "等待审核",
-  "usingComponents": {
-    "tree-steps": "/components/common/TreeSteps/TreeSteps",
-    "form-item": "/components/common/FormItem/FormItem"
-  }
-}

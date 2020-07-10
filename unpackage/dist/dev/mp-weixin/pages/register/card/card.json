@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "银行信息",
-  "usingComponents": {
-    "tree-steps": "/components/common/TreeSteps/TreeSteps",
-    "form-item": "/components/common/FormItem/FormItem"
-  }
-}

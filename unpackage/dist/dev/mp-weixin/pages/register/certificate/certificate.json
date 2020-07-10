@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "身份认证",
-  "usingComponents": {
-    "tree-steps": "/components/common/TreeSteps/TreeSteps",
-    "form-item": "/components/common/FormItem/FormItem"
-  }
-}

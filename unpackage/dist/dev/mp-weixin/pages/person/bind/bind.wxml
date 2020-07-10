@@ -1,1 +1,0 @@
-<view class="bindPage data-v-a437dae4"><form-item vue-id="0e9ec038-1" formList="{{formList}}" loading="{{loading}}" data-event-opts="{{[['^submit',[['submit']]]]}}" bind:submit="__e" class="data-v-a437dae4" bind:__l="__l"></form-item></view>

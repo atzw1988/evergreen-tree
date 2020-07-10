@@ -1,17 +1,17 @@
 <template>
 	<scroll-view class="formPage" scroll-y="true">
-		<slot></slot>
+		<slot name="abstract"></slot>
 		<view class="content">
 			<form @submit="formSubmit">
-				<block v-for="(item, index) in formList" :key="index + 'one'">
+				<block v-for="(item, index) in formList" :key="index">
 					<view style="height: 1rpx;"></view>
 					<view class="title">
 						<view class="index">{{index + 1}}</view>
 						<view>{{item.title}}</view>
 					</view>
-					<block v-for="(ele, no) in item.formInfo" :key="no + 'two'">
+					<block v-for="(ele, no) in item.formInfo" :key="no">
 						<view class="title" v-if="item.formInfo.length > 1">被保险人{{no + 1}}</view>
-						<block v-for="(par, se) in ele" :key="ser + 'three'">
+						<block v-for="(par, se) in ele" :key="se">
 							<view class="formItem" v-if="par.kind == 'input'">
 								<view class="formLabel" :style="{width: width + 'rpx'}">{{par.lable}}</view>
 								<view class="itemBox" :style="{width: `${620 -width}rpx`}">
@@ -27,7 +27,7 @@
 							</view>
 							<view class="formItem" v-if="par.kind == 'radio'">
 								<view class="radio">
-									<block v-for="(ite, num) in par.array" :key="num + 'four'">
+									<block v-for="(ite, num) in par.array" :key="num">
 										<view
 											:data-index="index"
 											:data-ele="item.formField"
@@ -116,7 +116,7 @@
 						</block>
 					</block>
 				</block>
-				<view class="formItem">
+				<view class="formItem" v-if="canMore">
 					<view class="radio">
 						<view
 							@click="addInsured"
@@ -171,6 +171,10 @@ export default {
 		priceUnit: {
 			type: String,
 			default: '元/年起'
+		},
+		canMore: {
+			type: Boolean,
+			default: false
 		}
 	},
 	data () {

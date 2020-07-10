@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "保单管理",
-  "usingComponents": {
-    "tab-list": "/components/common/TabList/TabList",
-    "policy-item": "/components/common/PolicyItem/PolicyItem"
-  }
-}

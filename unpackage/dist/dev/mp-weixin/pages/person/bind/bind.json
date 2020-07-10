@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "绑定经纪人",
-  "usingComponents": {
-    "form-item": "/components/common/FormItem/FormItem"
-  }
-}

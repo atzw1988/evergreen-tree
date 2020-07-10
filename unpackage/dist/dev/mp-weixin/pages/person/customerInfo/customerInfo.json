@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "客户详情",
-  "navigationStyle": "custom",
-  "usingComponents": {
-    "customer-order": "/components/common/CustomerOrder/CustomerOrder"
-  }
-}

@@ -2,9 +2,10 @@
 	<view class="proDemo">
 		<FormProduct
 			:formList="formList"
+			:canMore="canMore"
 			@addInsured="addInsured"
 			@pickerChange="pickerChange">
-			<view class="test">测试</view>
+			<view class="test" slot="abstract">测试</view>
 		</FormProduct>
 	</view>
 </template>
@@ -185,7 +186,8 @@ export default {
 						]
 					]
 				}
-			]
+			],
+			canMore: false
 		}
 	},
 	methods: {
