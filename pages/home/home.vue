@@ -30,6 +30,7 @@
 import ProductDetail from '@/components/common/ProductDetail/ProductDetail.vue'
 import { getStep } from '@/util/api.js'
 export default {
+	// 测试分支
 	components: {
 		ProductDetail
 	},
