@@ -79,13 +79,13 @@ export default {
 					icon: '../../static/home/customer.png'
 				}
 			],
+			// 删除部分代码
 			list: [
 				{
 					name: '长期返还型意外险',
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					// icon: '../../../static/home/thumb.png',
 					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
@@ -93,7 +93,6 @@ export default {
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					// icon: '../../../static/home/thumb.png'
 					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
@@ -101,7 +100,6 @@ export default {
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					// icon: '../../../static/home/thumb.png'
 					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				},
 				{
@@ -109,7 +107,6 @@ export default {
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					// icon: '../../../static/home/thumb.png'
 					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
 				}
 			],
