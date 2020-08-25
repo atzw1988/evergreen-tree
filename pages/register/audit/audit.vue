@@ -46,7 +46,7 @@ export default {
 		width: 690rpx;
 		margin: 0 auto;
 		.audit {
-			width: 252rpx;
+			width: 290rpx;
 			height: 296rpx;
 			display: block;
 			margin: 200rpx auto 20rpx;

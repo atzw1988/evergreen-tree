@@ -2,7 +2,7 @@
 	<view class="item">
 		<view class="header">
 			<view class="person">
-				<image class="personImg" src="http://iph.href.lu/17x17?fg=666666&bg=cccccc" mode=""></image>
+				<image class="personImg" src="../../../static/mine/name.png" mode=""></image>
 				<view class="name">{{item.name}}</view>
 			</view>
 			<view class="tag">{{filter.kindName(item.kind)}}</view>
@@ -22,11 +22,11 @@
 		</view>
 		<view class="down">
 			<view class="phone">
-				<image class="icon" src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
+				<image class="icon" src="../../../static/mine/phone.png" mode=""></image>
 				<view class="phoneNo">{{item.phone}}</view>
 			</view>
 			<view class="order">
-				<image class="icon" src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
+				<image class="icon" src="../../../static/mine/orderNo.png" mode=""></image>
 				<view class="orderNo">{{item.orderNo}}</view>
 			</view>
 		</view>

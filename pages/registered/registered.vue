@@ -3,7 +3,7 @@
 		<view style="height: 1rpx;"></view>
 		<view class="content">
 			<view style="height: 1rpx;"></view>
-			<image class="image" src="http://iph.href.lu/117x117?fg=666666&bg=cccccc" mode=""></image>
+			<image class="image" src="../../static/mine/invitation.png" mode=""></image>
 			<view class="inviter">
 				<view class="value">
 					<view class="name">校长</view>
@@ -49,7 +49,7 @@
 			left: 0;
 		}
 		.image {
-			width: 234rpx;
+			width: 316rpx;
 			height: 234rpx;
 			display: block;
 			margin: 56rpx auto 0;

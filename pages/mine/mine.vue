@@ -3,7 +3,7 @@
 		<view style="height: 1rpx;"></view>
 		<view class="header">
 			<view class="portrait">
-				<image src="http://iph.href.lu/45x45?fg=666666&bg=cccccc" mode=""></image>
+				<image src="../../static/mine/portrait.png" mode=""></image>
 			</view>
 			<view class="person">
 				<view class="name">{{nickName}}</view>
@@ -47,31 +47,31 @@ export default {
 				{
 					id: 0,
 					value: '保单管理',
-					icon: 'http://iph.href.lu/44x44?fg=666666&bg=cccccc',
+					icon: '../../static/mine/policyMana.png',
 					name: 'policyMana'
 				},
 				{
 					id: 1,
 					value: '客户管理',
-					icon: 'http://iph.href.lu/44x44?fg=666666&bg=cccccc',
+					icon: '../../static/mine/customer.png',
 					name: 'customer'
 				},
 				{
 					id: 2,
 					value: '我的订单',
-					icon: 'http://iph.href.lu/44x44?fg=666666&bg=cccccc',
+					icon: '../../static/mine/order.png',
 					name: 'order'
 				},
 				{
 					id: 3,
 					value: '帮助中心',
-					icon: 'http://iph.href.lu/44x44?fg=666666&bg=cccccc',
+					icon: '../../static/mine/services.png',
 					name: 'service'
 				},
 				{
 					id: 4,
 					value: '邀请',
-					icon: 'http://iph.href.lu/44x44?fg=666666&bg=cccccc',
+					icon: '../../static/mine/invite.png',
 					name: 'invite'
 				}
 			]
@@ -98,6 +98,8 @@ export default {
 <style lang="less" scoped>
 .minePage {
 	width: 690rpx;
+	// width: 100%;
+	padding: 0 30rpx;
 	height: 100vh;
 	margin: 0 auto;
 	color: #333333;

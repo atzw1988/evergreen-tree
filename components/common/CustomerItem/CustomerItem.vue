@@ -1,19 +1,19 @@
 <template>
 	<view class="item" @click="handleClick">
-		<image class="itemImg" src="http://iph.href.lu/45x45?fg=666666&bg=cccccc" mode=""></image>
+		<image class="itemImg" src="../../../static/mine/person.png" mode=""></image>
 		<view class="detail">
 			<view class="name">{{items.name}}</view>
 			<view class="info">
 				<view class="order">
-					<image class="icon" src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
+					<image class="icon" src="../../../static/mine/orders.png" mode=""></image>
 					{{items.order}}
 				</view>
 				<view class="now">
-					<image class="icon" src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
+					<image class="icon" src="../../../static/mine/time.png" mode=""></image>
 					{{items.now}}
 				</view>
 				<view class="money">
-					<image class="icon" src="http://iph.href.lu/12x12?fg=666666&bg=cccccc" mode=""></image>
+					<image class="icon" src="../../../static/mine/money.png" mode=""></image>
 					{{items.money}}
 				</view>
 			</view>

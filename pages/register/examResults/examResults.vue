@@ -33,8 +33,8 @@ export default {
 	}
 	.examImg {
 		display: block;
-		width: 360rpx;
-		height: 480rpx;
+		width: 424rpx;
+		height: 458rpx;
 		margin: 84rpx auto 0;
 	}
 	.score {

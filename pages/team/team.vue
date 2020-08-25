@@ -6,7 +6,7 @@
 			<view class="userInfo">
 				<view class="team">
 					<view class="portrait" @click="handleClick">
-						<image src="http://iph.href.lu/45x45?fg=666666&bg=cccccc" mode=""></image>
+						<image src="../../static/team/portrait.png" mode=""></image>
 					</view>
 					<view class="teamName">
 						<view class="name">爆破团队</view>
@@ -78,37 +78,37 @@ export default {
 					id: 0,
 					name: '增员人数',
 					value: 100,
-					icon: 'http://iph.href.lu/34x34?fg=666666&bg=cccccc'
+					icon: '../../static/team/addone.png'
 				},
 				{
 					id: 1,
 					name: '增员保费',
 					value: 2000,
-					icon: 'http://iph.href.lu/34x34?fg=666666&bg=cccccc'
+					icon: '../../static/team/addtwo.png'
 				},
 				{
 					id: 2,
 					name: '增员奖励',
 					value: 1000,
-					icon: 'http://iph.href.lu/34x34?fg=666666&bg=cccccc'
+					icon: '../../static/team/addthree.png'
 				},
 				{
 					id: 3,
 					name: '育成人数',
 					value: 100,
-					icon: 'http://iph.href.lu/34x34?fg=666666&bg=cccccc'
+					icon: '../../static/team/bredone.png'
 				},
 				{
 					id: 4,
 					name: '育成保费',
 					value: 2000,
-					icon: 'http://iph.href.lu/34x34?fg=666666&bg=cccccc'
+					icon: '../../static/team/bredtwo.png'
 				},
 				{
 					id: 5,
 					name: '育成奖励',
 					value: 1000,
-					icon: 'http://iph.href.lu/34x34?fg=666666&bg=cccccc'
+					icon: '../../static/team/bredthree.png'
 				}
 			]
 		}
@@ -132,7 +132,7 @@ export default {
 		width: 100%;
 		height: 580rpx;
 		background-color: #00D6C0;
-		color: #FFFFFF;
+		color: #FFFFFF !important;
 		z-index: 100;
 		.pageTitle {
 			width: 100%;
@@ -156,6 +156,7 @@ export default {
 					border-radius: 50%;
 					margin-right: 30rpx;
 					overflow: hidden;
+					background-color: #FFFFFF;
 					image {
 						width: 90rpx;
 						height: 90rpx;

@@ -17,6 +17,17 @@
 </template>
 
 <script>
+/**
+ * 全局消息通知
+ * @property {String} background 通知顶部栏背景颜色（默认无）
+ * @property {String} color 最小值（默认0）
+ * @property {Number} zIndex 层级值（默认1001）
+ * @property {Boolean} insetTop 是否有状态栏高度（默认false）
+ * @property {Number} top 距离顶部高度(默认为0rpx)
+ * @event {Function} handleShow 通知栏显示
+ * @event {Function} handleHide 通知栏隐藏
+ * @example <Notify id="notify" />
+ */
 export default {
 	name: 'Notify',
 	props: {

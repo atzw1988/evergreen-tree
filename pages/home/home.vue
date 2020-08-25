@@ -10,13 +10,19 @@
 			</view>
 		</view>
 		<view class="hotProduct">
-			<view class="hotTitle">爆款产品 <image src="@/static/home/hotTitle.png" mode=""></image></view>
+			<view class="hotTitle">
+				<view class="title">爆款产品</view>
+				<image src="@/static/home/hotTitle.png" mode=""></image>
+			</view>
 			<view class="hotDetail">
 				<image src="@/static/home/family.png" mode=""></image>
 			</view>
 		</view>
 		<view class="productList">
-			<view class="listTitle">精品推荐<image src="@/static/home/productTitle.png" mode=""></image></view>
+			<view class="listTitle">
+				<view class="title">精品推荐</view>
+				<image src="@/static/home/productTitle.png" mode=""></image>
+			</view>
 			<block v-for="(item, index) in list" :key="index">
 				<ProductDetail :item="item"></ProductDetail>
 			</block>
@@ -86,28 +92,28 @@ export default {
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
+					icon: '../../static/product/product.png'
 				},
 				{
 					name: '长期返还型意外险',
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
+					icon: '../../static/product/product.png'
 				},
 				{
 					name: '长期返还型意外险',
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
+					icon: '../../static/product/product.png'
 				},
 				{
 					name: '长期返还型意外险',
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
+					icon: '../../static/product/product.png'
 				}
 			],
 			isShow: false
@@ -121,6 +127,18 @@ export default {
 		setTimeout(() => {
 			this.isShow = false
 		}, 3000)
+		let num
+		// for (var i = 0; i < 1000000000001; i++) {
+		// 	if (i = 1000000000001) {
+		// 		console.log(1)
+		// 	}
+		// }
+		setTimeout(() => {
+			console.log(1)
+		}, 4000)
+		this.$nextTick(() => {
+			console.log('完成')
+		})
 	},
 	methods: {
 		// 跳转菜单
@@ -194,10 +212,14 @@ export default {
 			.hotTitle {
 				width: 100%;
 				height: 50rpx;
-				font-size: 36rpx;
-				font-weight: bold;
+				display: flex;
+				align-items: center;
+				.title {
+					font-size: 36rpx;
+					font-weight: bold;
+				}
 				image {
-					display: inline-block;
+					display: block;
 					width: 126rpx;
 					height: 31rpx;
 					margin-left: 20rpx;
@@ -221,11 +243,15 @@ export default {
 			.listTitle {
 				width: 100%;
 				height: 50rpx;
-				font-size: 36rpx;
-				font-weight: bold;
 				margin-bottom: 10rpx;
+				display: flex;
+				align-items: center;
+				.title {
+					font-size: 36rpx;
+					font-weight: bold;
+				}
 				image {
-					display: inline-block;
+					display: block;
 					width: 126rpx;
 					height: 31rpx;
 					margin-left: 20rpx;

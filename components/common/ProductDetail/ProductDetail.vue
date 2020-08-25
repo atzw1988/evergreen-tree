@@ -13,7 +13,9 @@
 					<text v-if="isStaff" class="commi">佣金{{item.commi}}元/年起</text>
 				</view>
 			</view>
-			<view class="icon">></view>
+			<view class="icon">
+				<uni-icons type="forward"></uni-icons>
+			</view>
 		</view>
 	</view>
 </template>

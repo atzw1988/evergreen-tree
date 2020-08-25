@@ -21,7 +21,7 @@
 			<view class="title">你可获得</view>
 			<view class="text">邀请新人加入，新人出单</view>
 			<view class="text">额外获得新人出单保费10%的收入。</view>
-			<image class="detailImg" src="http://iph.href.lu/162x92?fg=666666&bg=cccccc" mode=""></image>
+			<image class="detailImg" src="../../../static/mine/calendar.png" mode=""></image>
 			<tree-button text="去邀请" @click="handleInvite"></tree-button>
 		</view>
 	</view>
@@ -106,8 +106,8 @@ export default {
 			margin-top: 16rpx;
 		}
 		.detailImg {
-			width: 324rpx;
-			height: 184rpx;
+			width: 348rpx;
+			height: 220rpx;
 			margin: 44rpx auto 80rpx;
 			display: block;
 		}

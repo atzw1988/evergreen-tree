@@ -31,8 +31,8 @@ export default {
 	width: 100%;
 	height: 100vh;
 	.serviceImg {
-		width: 290rpx;
-		height: 314rpx;
+		width: 376rpx;
+		height: 354rpx;
 		display: block;
 		margin: 136rpx auto 180rpx;
 	}

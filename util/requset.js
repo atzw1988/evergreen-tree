@@ -11,7 +11,6 @@ const request = (url, data, method) => {
 	let header = {
 		'Content-Type': 'application/json'
 	}
-	set('token', 'bd63a8e107fc43228816c7801ab63ecb1593682418771')
 	const token = get('token')
 	if (token) header.token = token
 	return new Promise((resolve, reject) => {
@@ -25,11 +24,6 @@ const request = (url, data, method) => {
 					resolve(data)
 				} else if (statusCode == 401) {
 					dT('登陆过期，请重新登陆')
-					// setTimeout(() => {
-					// 	router.push({
-					// 		name: 'registered'
-					// 	})
-					// }, 2000)
 				}
 			},
 			fail: (error) => {

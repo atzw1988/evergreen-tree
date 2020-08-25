@@ -5,7 +5,30 @@
 			:canMore="canMore"
 			@addInsured="addInsured"
 			@pickerChange="pickerChange">
-			<view class="test" slot="abstract">测试</view>
+			<view class="test" slot="abstract">
+				<view class="banner">
+					<view
+						class="item"
+						v-for="(item, index) in styleList"
+						:style="{
+							left: item.left + 'rpx',
+							top: item.top + 'rpx',
+							transform: item.transform
+						}"
+						:key="index">
+						<image class="img" src="../../../static/home/customer.png" mode=""></image>
+					</view>
+				</view>
+				<button type="default" @click="handleClick">点击</button>
+				<view class="banner">
+					<view class="cardDemo" :style="{transform: card.post.tran, opacity: card.post.opacity}">
+						正面
+					</view>
+					<view class="cardDemo" :style="{transform: card.side.tran, opacity: card.side.opacity}">
+						反面
+					</view>
+				</view>
+			</view>
 		</FormProduct>
 	</view>
 </template>
@@ -187,7 +210,55 @@ export default {
 					]
 				}
 			],
-			canMore: false
+			canMore: false,
+			styleList: [
+				{
+					top: 200,
+					left: 275,
+					transform: 'rotateY(0deg)'
+				},
+				{
+					top: 200,
+					left: 275,
+					transform: 'rotateY(360deg)'
+				},
+				{
+					top: 150,
+					left: 50,
+					transform: 'rotateY(320deg) skewY(15deg) scale(0.95)'
+				},
+				{
+					top: 50,
+					left: 80,
+					transform: 'rotateY(240deg) skewY(30deg) scale(0.9)'
+				},
+				{
+					top: 0,
+					left: 275,
+					transform: 'rotateY(180deg) scale(0.8)'
+				},
+				{
+					top: 50,
+					left: 470,
+					transform: 'rotateY(120deg) skewY(-30deg) scale(0.9)'
+				},
+				{
+					top: 150,
+					left: 500,
+					transform: 'rotateY(40deg) skewY(-15deg) scale(0.95)'
+				}
+			],
+			card: {
+				post: {
+					tran: 'rotateY(0)',
+					opacity: 1
+				},
+				side: {
+					tran: 'rotateY(180deg)',
+					opacity: 0
+				}
+			},
+			isPost: true
 		}
 	},
 	methods: {
@@ -201,6 +272,34 @@ export default {
 					item.formInfo.push(item.formInfo[0])
 				}
 			})
+		},
+		handleClick () {
+			let arr = this.styleList
+			console.log(arr.unshift(arr.pop()))
+			if (this.isPost) {
+				this.card = {
+					post: {
+						tran: 'rotateY(180deg)',
+						opacity: 0
+					},
+					side: {
+						tran: 'rotateY(360deg)',
+						opacity: 1
+					}
+				}
+			} else {
+				this.card = {
+					post: {
+						tran: 'rotateY(0)',
+						opacity: 1
+					},
+					side: {
+						tran: 'rotateY(180deg)',
+						opacity: 0
+					}
+				}
+			}
+			this.isPost = !this.isPost
 		}
 	}
 }
@@ -212,7 +311,40 @@ export default {
 	height: 100vh;
 	background-color: #FAFAFA;
 	.test {
-		height: 500rpx;
+		height: 1000rpx;
+		width: 100%;
+		.banner {
+			width: 100%;
+			height: 500rpx;
+			background-color: #2C405A;
+			position: relative;
+			perspective: 800rpx;
+			.item {
+				width: 200rpx;
+				height: 300rpx;
+				position: absolute;
+				background-color: #0A98D5;
+				transition: all 0.5s ease-in-out;
+				color: #FFFFFF;
+				text-align: center;
+				line-height: 300rpx;
+				border-radius: 20rpx;
+				opacity: 0.5;
+				.img {
+					width: 100rpx;
+					height: 100rpx;
+				}
+			}
+			.cardDemo {
+				width: 500rpx;
+				height: 200rpx;
+				background-color: #07C160;
+				position: absolute;
+				top: 50rpx;
+				left: 125rpx;
+				transition: all 0.8s ease-in-out;
+			}
+		}
 	}
 }
 </style>

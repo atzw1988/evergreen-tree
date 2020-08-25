@@ -2,15 +2,15 @@
 	<view class="customerInfoPage">
 		<view class="header">
 			<image @click="backPage" class="back" src="@/static/common/back.png" mode=""></image>
-			<image src="http://iph.href.lu/375x162?fg=666666&bg=cccccc" mode=""></image>
+			<image src="../../../static/mine/header.png" mode=""></image>
 			<view class="userInfo">
 				<view class="portrait">
-					<image src="http://iph.href.lu/45x45?fg=666666&bg=cccccc" mode=""></image>
+					<image src="../../../static/mine/portrait.png" mode=""></image>
 				</view>
 				<view class="customer">
 					<view class="name">{{userInfo.name}}</view>
 					<view class="contact" @click="callPhone">
-						<image src="http://iph.href.lu/10x10?fg=666666&bg=cccccc" mode=""></image>
+						<image src="../../../static/mine/phoneGreen.png" mode=""></image>
 						<text>联系客户</text>
 					</view>
 				</view>
@@ -86,7 +86,7 @@ export default {
 	background-color: #FAFAFA;
 	.header {
 		width: 100%;
-		height: 600rpx;
+		height: 440rpx;
 		background-color: #FFFFFF;
 		color: #333333;
 		font-size: 24rpx;
@@ -100,14 +100,14 @@ export default {
 		}
 		image {
 			width: 750rpx;
-			height: 324rpx;
+			height: 198rpx;
 			z-index: 100;		}
 		.userInfo {
 			width: 670rpx;
 			height: 320rpx;
 			z-index: 101;
 			position: absolute;
-			top: 280rpx;
+			top: 154rpx;
 			left: 40rpx;
 			.portrait {
 				width: 90rpx;
@@ -159,7 +159,7 @@ export default {
 	}
 	.listItem {
 		width: 690rpx;
-		height: calc(100vh - 620rpx);
+		height: calc(100vh - 460rpx);
 		margin: 0 auto;
 		padding-bottom: 20rpx;
 	}

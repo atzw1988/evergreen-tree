@@ -1,5 +1,5 @@
 <template>
-	<view class="productPage">
+	<view class="productPage" :style="[pageTop]">
 		<TabList :tabList="tabList" @changeTab="changeTab"></TabList>
 		<scroll-view scroll-y="true" class="itemList">
 			<block v-for="(item, index) in list" :key="index">
@@ -23,6 +23,9 @@ export default {
 	},
 	data () {
 		return {
+			pageTop: {
+				top: '100vh'
+			},
 			tabList: [
 				{
 					title: '推荐',
@@ -54,8 +57,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					// icon: '../../../static/home/thumb.png',
-					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
+					icon: '../../static/product/product.png'
 				},
 				{
 					id: 1,
@@ -64,8 +66,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					// icon: '../../../static/home/thumb.png'
-					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
+					icon: '../../static/product/product.png'
 				},
 				{
 					id: 2,
@@ -74,8 +75,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					// icon: '../../../static/home/thumb.png'
-					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
+					icon: '../../static/product/product.png'
 				},
 				{
 					id: 3,
@@ -84,8 +84,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					// icon: '../../../static/home/thumb.png'
-					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
+					icon: '../../static/product/product.png'
 				},
 				{
 					id: 4,
@@ -94,8 +93,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					// icon: '../../../static/home/thumb.png'
-					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
+					icon: '../../static/product/product.png'
 				},
 				{
 					id: 0,
@@ -104,8 +102,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					// icon: '../../../static/home/thumb.png'
-					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
+					icon: '../../static/product/product.png'
 				},
 				{
 					id: 1,
@@ -114,8 +111,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					// icon: '../../../static/home/thumb.png'
-					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
+					icon: '../../static/product/product.png'
 				},
 				{
 					id: 1,
@@ -124,8 +120,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					// icon: '../../../static/home/thumb.png'
-					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
+					icon: '../../static/product/product.png'
 				},
 				{
 					id: 1,
@@ -134,8 +129,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					// icon: '../../../static/home/thumb.png'
-					icon: 'http://iph.href.lu/80x80?fg=666666&bg=cccccc'
+					icon: '../../static/product/product.png'
 				}
 			]
 		}
@@ -154,6 +148,9 @@ export default {
 	},
 	onShow () {
 		this.list = this.listData
+		this.pageTop = {
+			top: '0rpx'
+		}
 	}
 }
 
@@ -163,6 +160,8 @@ export default {
 .productPage {
 	width: 100%;
 	height: 100vh;
+	position: absolute;
+	transition: all 1s ease-in-out;
 	.itemList {
 		width: 690rpx;
 		margin: 0 auto;
