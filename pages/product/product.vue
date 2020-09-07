@@ -24,7 +24,7 @@ export default {
 	data () {
 		return {
 			pageTop: {
-				top: '100vh'
+				top: '0'
 			},
 			tabList: [
 				{
@@ -57,7 +57,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../static/product/product.png'
+					icon: '../../../static/product/product.png'
 				},
 				{
 					id: 1,
@@ -66,7 +66,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../static/product/product.png'
+					icon: '../../../static/product/product.png'
 				},
 				{
 					id: 2,
@@ -75,7 +75,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../static/product/product.png'
+					icon: '../../../static/product/product.png'
 				},
 				{
 					id: 3,
@@ -84,7 +84,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../static/product/product.png'
+					icon: '../../../static/product/product.png'
 				},
 				{
 					id: 4,
@@ -93,7 +93,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../static/product/product.png'
+					icon: '../../../static/product/product.png'
 				},
 				{
 					id: 0,
@@ -102,7 +102,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../static/product/product.png'
+					icon: '../../../static/product/product.png'
 				},
 				{
 					id: 1,
@@ -111,7 +111,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../static/product/product.png'
+					icon: '../../../static/product/product.png'
 				},
 				{
 					id: 1,
@@ -120,7 +120,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../static/product/product.png'
+					icon: '../../../static/product/product.png'
 				},
 				{
 					id: 1,
@@ -129,7 +129,7 @@ export default {
 					price: 6,
 					commi: 10,
 					time: '月',
-					icon: '../../static/product/product.png'
+					icon: '../../../static/product/product.png'
 				}
 			]
 		}
@@ -144,13 +144,19 @@ export default {
 		// 点击产品
 		handleClick (item) {
 			console.log(item)
+			this.$_router.push({
+				name: 'million',
+				data: {
+					index: 1
+				}
+			})
 		}
 	},
 	onShow () {
 		this.list = this.listData
-		this.pageTop = {
-			top: '0rpx'
-		}
+		// this.pageTop = {
+		// 	top: '0rpx'
+		// }
 	}
 }
 

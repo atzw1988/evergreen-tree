@@ -40,6 +40,12 @@
 			"style": {
 				"navigationBarTitleText": "注册"
 			}
+		},
+		{
+			"path":"pages/products/productDetail/productDetail",
+			"style": {
+				"navigationBarTitleText": "产品详情"
+			}
 		}
 	],
 	"subPackages": [

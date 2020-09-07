@@ -41,6 +41,7 @@ export default {
 	},
 	data () {
 		return {
+			number: 0,
 			tabList: [
 				{
 					title: '推荐',
@@ -92,28 +93,28 @@ export default {
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					icon: '../../static/product/product.png'
+					icon: '../../../static/product/product.png'
 				},
 				{
 					name: '长期返还型意外险',
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					icon: '../../static/product/product.png'
+					icon: '../../../static/product/product.png'
 				},
 				{
 					name: '长期返还型意外险',
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					icon: '../../static/product/product.png'
+					icon: '../../../static/product/product.png'
 				},
 				{
 					name: '长期返还型意外险',
 					value: '确诊即赔,最高50万',
 					price: 6,
 					time: '月',
-					icon: '../../static/product/product.png'
+					icon: '../../../static/product/product.png'
 				}
 			],
 			isShow: false
@@ -141,6 +142,9 @@ export default {
 		})
 	},
 	methods: {
+		checkNumber () {
+			console.log(this.number)
+		},
 		// 跳转菜单
 		handleMenu (menu) {
 			console.log(menu)

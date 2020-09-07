@@ -19,6 +19,10 @@ module.exports = {
 		type: 'tab',
 		path: '/pages/mine/mine'
 	},
+	// 百万综合意外险
+	million: {
+		path: '/pages/products/productDetail/productDetail'
+	},
 	// 保单管理
 	policyMana: {
 		path: '/pages/person/policyMana/policyMana'
